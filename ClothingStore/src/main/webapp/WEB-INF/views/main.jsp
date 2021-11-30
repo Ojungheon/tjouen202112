@@ -27,7 +27,10 @@
 			<h1>navi area</h1>
 		</div>
 		<div class="content_area">
-			<h1>content area</h1>
+			<div class="mySlides">
+				<div class="numbertext">1 / 4</div>
+				<img src="https://image.brandi.me/home/banner/bannerImage_0_1638149169.jpeg" style="width : 100%">
+			</div>
 		</div>
 		<div class="foot_bar_area">
 			<h1>foot area</h1>
