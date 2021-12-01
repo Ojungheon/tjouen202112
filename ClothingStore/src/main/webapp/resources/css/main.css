@@ -2,6 +2,8 @@
 *{
 	margin: 0;
 	padding:0;
+	text-decoration: none;
+	list-style: none;
 }
 /* 화면 전체*/
 .wrapper{
@@ -60,4 +62,29 @@
 	width: 100%;
 	background-color: gray;
 	height: 300px;
+}
+fieldset{margin: 0 auto; width: 1080px; height: 490px;}
+.mySlides{
+	width:1080px; height: 490px;
+	overflow: hidden;
+	position: relative;
+	margin: 0 auto;
+}
+.mySlides>ul{
+	width: calc(1080px*4);
+}
+.mySlides li{float: left;}
+.mySlides>ul::after{
+	content:""; clear:both; display: block;
+}
+.mySlides>a{
+	position: absolute; top: 45%;
+}
+.mySlides>a:first-of-type {
+	left:0px;
+	
+}
+.mySlides>a:last-of-type {
+	right:0px;
+	
 }
