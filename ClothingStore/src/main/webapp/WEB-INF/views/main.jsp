@@ -22,11 +22,16 @@
 		})
 		$(".mySlides>a").first().click(function(){
 			$(".mySlides>ul").animate(
-				{"margin-right":"+1080px"},500,
-				function(){
-					$(".mySlides>ul").css("margin-right","0px");
-					$(".mySlides>ul").prepend($(this).children().eq(3))
-				})
+                    {"width":"calc(1080px*5)", "margin-left":"-1080px"},
+                    0,
+                    function () {
+                        $(".mySlides>ul").prepend($(this).children().eq(3));
+                    }
+                )
+                $(".mySlides>ul").animate(
+                    {"margin-left":"0px", "width":"calc(1080px*4)"},
+                    500,
+                )
 		})
 	})
 </script>
