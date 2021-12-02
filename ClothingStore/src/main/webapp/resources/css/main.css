@@ -63,6 +63,7 @@
 	background-color: gray;
 	height: 300px;
 }
+/*여기서부터 배너 부분*/
 fieldset{margin: 0 auto; width: 1080px; height: 490px;}
 .mySlides{
 	width:1080px; height: 490px;
@@ -86,5 +87,36 @@ fieldset{margin: 0 auto; width: 1080px; height: 490px;}
 }
 .mySlides>a:last-of-type {
 	right:0px;
-	
 }
+/*여기서부터 드롭다운 메뉴부분*/
+#menu {
+	
+	font: bold 16px "malgun gothic";
+	width:1040px;
+	height: 50px;
+	background: #ccc;
+	color: black;
+	line-height: 50px;
+	margin: 0 auto;
+	text-align: center;
+}
+#menu > ul > li {
+	float:left;
+	width: 130px;
+	position: relative;
+}
+#menu > ul > li > ul {
+		width:130px;
+		display:none;
+		position: absolute;
+		font-size:14px;
+		background: skyblue;
+}
+#menu > ul > li:hover > ul {
+		display:block;
+}
+#menu > ul > li > ul > li:hover {
+		background: orange;
+		transition: ease 1s;
+		}
+

@@ -36,7 +36,7 @@
 <div class="wrapper">
 	<div class="wrap">
 		<div class="gnb_area">
-			<h1>gnb area</h1>
+			로그인   회원가입  장바구니  마이페이지  커뮤니티   Q&A   Review
 		</div>
 		<div class="top_area">
 			<div class="logo_area">
@@ -48,7 +48,66 @@
 			<div class="clearfix"></div>
 		</div>
 		<div class="navi_bar_area">
-			<h1>navi area</h1>
+			<div id="menu">
+				<ul>
+					<li><a href="#">NEW</a>
+						<ul>
+							<li><a href="#1">sub_menu</a></li>
+							<li><a href="#1">sub_menu2</a></li>
+							<li><a href="#1">sub_menu3</a></li>
+						</ul>
+					</li>
+					<li><a href="#">BEST50</a>
+						<ul>
+							<li><a href="#1">sub_menu</a></li>
+							<li><a href="#1">sub_menu2</a></li>
+							<li><a href="#1">sub_menu3</a></li>
+						</ul>
+					</li>
+					<li><a href="#">SALE</a>
+						<ul>
+							<li><a href="#1">sub_menu</a></li>
+							<li><a href="#1">sub_menu2</a></li>
+							<li><a href="#1">sub_menu3</a></li>
+						</ul>
+					</li>
+					<li><a href="#">상의</a>
+						<ul>
+							<li><a href="#1">sub_menu</a></li>
+							<li><a href="#1">sub_menu2</a></li>
+							<li><a href="#1">sub_menu3</a></li>
+						</ul>
+					</li>
+					<li><a href="#">아우터</a>
+						<ul>
+							<li><a href="#1">sub_menu</a></li>
+							<li><a href="#1">sub_menu2</a></li>
+							<li><a href="#1">sub_menu3</a></li>
+						</ul>
+					</li>
+					<li><a href="#">하의</a>
+						<ul>
+							<li><a href="#1">sub_menu</a></li>
+							<li><a href="#1">sub_menu2</a></li>
+							<li><a href="#1">sub_menu3</a></li>
+						</ul>
+					</li>
+					<li><a href="#">세트</a>
+						<ul>
+							<li><a href="#1">sub_menu</a></li>
+							<li><a href="#1">sub_menu2</a></li>
+							<li><a href="#1">sub_menu3</a></li>
+						</ul>
+					</li>
+					<li><a href="#">잡화</a>
+						<ul>
+							<li><a href="#1">sub_menu</a></li>
+							<li><a href="#1">sub_menu2</a></li>
+							<li><a href="#1">sub_menu3</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
 		</div>
 		<div class="content_area">
 			<fieldset>
