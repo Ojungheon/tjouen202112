@@ -111,25 +111,51 @@
 		</div>
 		<div class="content_area">
 			<fieldset>
-			<div class="mySlides">
-				<ul>
-				    <li><img class="banner" src="https://image.brandi.me/home/banner/bannerImage_0_1638149169.jpeg"></li>
-				
-	
-					<li><img class="banner" src="https://image.brandi.me/home/banner/bannerImage_0_1637913097.jpg"></li>
+				<div class="mySlides">
+					<ul>
+					    <li><img class="banner" src="https://image.brandi.me/home/banner/bannerImage_0_1638149169.jpeg"></li>
+					
 		
-		
-					<li><img class="banner" src="https://image.brandi.me/home/banner/bannerImage_0_1637732092.jpg"></li>
+						<li><img class="banner" src="https://image.brandi.me/home/banner/bannerImage_0_1637913097.jpg"></li>
 			
-		
-					<li><img class="banner" src="https://image.brandi.me/home/banner/bannerImage_0_1638258239.jpeg"></li>
-				</ul>
+			
+						<li><img class="banner" src="https://image.brandi.me/home/banner/bannerImage_0_1637732092.jpg"></li>
 				
-				<a><img src="resources/img/prev_btn.png"></a>
-				<a><img src="resources/img/next_btn.png"></a>
-				
-			</div>
+			
+						<li><img class="banner" src="https://image.brandi.me/home/banner/bannerImage_0_1638258239.jpeg"></li>
+					</ul>
+					
+					<a><img src="resources/img/prev_btn.png"></a>
+					<a><img src="resources/img/next_btn.png"></a>
+					
+				</div>
 			</fieldset>
+			<hr>
+			<div class="best">
+				<div class="best_title_area">
+					<h3>BEST ITEM</h3><br>
+					<p>이 달의 베스트 아이템을 확인해보세요.</p>
+					<hr>
+				</div>
+				<div class="best_item_area">
+					
+						<span><img class="bestc" id="b1" src="https://jb-shop.kr/web/product/big/202101/77ee04362e57ae9ef8930cfa1696a4ee.webp"></span>
+						<span><img class="bestc" id="b2" src="https://jb-shop.kr/web/product/big/202102/2b7da28f914d2c399804a445f4827d57.webp"></span>
+						<span><img class="bestc" id="b3" src="https://jb-shop.kr/web/product/big/202111/47a698b0637bda6296e6d8f7ae1e7377.webp"></span>
+						<span><img class="bestc" id="b4" src="https://jb-shop.kr/web/product/big/202111/3fe509a0f3496e0bd690f0a24c6ea64a.webp"></span>
+					
+					<ul>
+						<li><img class="bestc" id="b5" src="https://jb-shop.kr/web/product/big/202111/2eab5e1b6ce641a04c6927e3e73351b1.webp"></li>
+						<li><img class="bestc" id="b6" src="https://jb-shop.kr/web/product/big/202111/4ab6aab433d982ba6adb766669db4d91.webp"></li>
+						<li><img class="bestc" id="b7" src="https://jb-shop.kr/web/product/big/202010/58655ccc5a37908a7b7e528423f2bc2a.webp"></li>
+						<li><img class="bestc" id="b8" src="https://jb-shop.kr/web/product/big/202111/87a736e40923ecb53b176d7620ad6ec4.webp"></li>
+					</ul>
+				</div>
+			</div>	
+				
+			<div class="new"></div>
+			<div class="sale"></div>
+			
 		</div>
 		<div class="foot_bar_area">
 			<h1>foot area</h1>
