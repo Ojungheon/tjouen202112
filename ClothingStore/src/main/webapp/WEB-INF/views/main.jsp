@@ -144,11 +144,19 @@
 				</div>
 				<div class="best_item_area">
 					
-						<span><img class="bestc" id="b1" src="https://jb-shop.kr/web/product/big/202101/77ee04362e57ae9ef8930cfa1696a4ee.webp"></span>
+						<span>
+							<img class="bestc" id="b1" src="https://jb-shop.kr/web/product/big/202101/77ee04362e57ae9ef8930cfa1696a4ee.webp">
+							
+						</span>
 						<span><img class="bestc" id="b2" src="https://jb-shop.kr/web/product/big/202102/2b7da28f914d2c399804a445f4827d57.webp"></span>
 						<span><img class="bestc" id="b3" src="https://jb-shop.kr/web/product/big/202111/47a698b0637bda6296e6d8f7ae1e7377.webp"></span>
 						<span><img class="bestc" id="b4" src="https://jb-shop.kr/web/product/big/202111/3fe509a0f3496e0bd690f0a24c6ea64a.webp"></span>
-					
+					<div class="item_name_area">
+						<div class="item_1">
+							<h4>1997 양기모 후드</h4>
+							<p>가격: 42000원</p>
+						</div>	
+					</div>
 					<ul>
 						<li><img class="bestc" id="b5" src="https://jb-shop.kr/web/product/big/202111/2eab5e1b6ce641a04c6927e3e73351b1.webp"></li>
 						<li><img class="bestc" id="b6" src="https://jb-shop.kr/web/product/big/202111/4ab6aab433d982ba6adb766669db4d91.webp"></li>
