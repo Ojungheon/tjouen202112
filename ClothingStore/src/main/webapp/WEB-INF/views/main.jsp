@@ -45,7 +45,7 @@
 		</div>
 		<div class="top_area">
 			<div class="logo_area">
-				<h1>logo area</h1>
+				<a href="/main"><img src="resources/img/SOJ Fashion.png"></a>
 			</div>
 			<div class="search_area">
 				<h1>search area</h1>
