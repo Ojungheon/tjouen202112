@@ -149,7 +149,7 @@ table {
 						<tr>
 							<td style="text-align: center">1</td>
 							<td style="text-align: center">아무상품</td>
-							<td style="text-align: center">상의</td>
+							<td style="text-align: center">상품문의</td>
 							<td style="text-align: left; padding-left: 20px;">사이즈가 왜 이래요?</td>
 							<td style="text-align: center">지나가는사람</td>
 							<td style="text-align: center">2021-12-06</td>
