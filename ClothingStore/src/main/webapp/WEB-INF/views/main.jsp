@@ -78,14 +78,14 @@
 					</li>
 					<li><a href="#">상의</a>
 						<ul>
-							<li><a href="#1">sub_menu</a></li>
-							<li><a href="#1">sub_menu2</a></li>
-							<li><a href="#1">sub_menu3</a></li>
+							<li><a href="#1">LONG/HOODY</a></li>
+							<li><a href="#1">KNIT</a></li>
+							<li><a href="#1">SLEEVELESS</a></li>
 						</ul>
 					</li>
 					<li><a href="#">아우터</a>
 						<ul>
-							<li><a href="#1">sub_menu</a></li>
+							<li><a href="#1">JUMPER</a></li>
 							<li><a href="#1">sub_menu2</a></li>
 							<li><a href="#1">sub_menu3</a></li>
 						</ul>
