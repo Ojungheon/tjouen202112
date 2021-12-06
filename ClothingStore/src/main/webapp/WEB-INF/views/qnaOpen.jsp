@@ -93,7 +93,7 @@
 			</div>
 		</div>
 		<div class="content_area">
-			<h3>Q&A 게시판</h3>
+			<h4>Q&A 게시판</h4>
 			<hr>
 			<div class="qnaList">
 				<table>
