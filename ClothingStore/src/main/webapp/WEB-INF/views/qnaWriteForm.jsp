@@ -16,7 +16,7 @@
 /* .qnaArea{
 	height: 700px;
 } */
-.qnaOpen{
+table{
 	border: 1px solid black;
 	width: 100%;
 	border-collapse: collapse;
@@ -108,29 +108,29 @@ table>tbody>tr>td{
 				<h4>Q&A 게시판</h4>
 				<hr>
 				<div class="qnaList">
-					<table class="qnaOpen">
-						<tbody>
-							<tr>
-								<td style="height:20px">제목</td>
-								<td>사이즈가 왜 이래요?</td>
-							</tr>
-							<tr>
-								<td style="height:20px">번호</td>
-								<td>1</td>
-							</tr>
-							<tr>
-								<td style="height:20px">작성자</td>
-								<td>지나가던사람</td>
-							</tr>
-							<tr>
-								<td style="height:300px">내용</td>
-								<td>
-									사이트에 올라온 사이즈표랑 실제랑 너무 차이나요.<br>
-								</td>
-							</tr>
-						</tbody>
-					</table>
-					수정    삭제    <a href="qna">목록보기</a>
+					<form action="qnaWrite" method="post">
+						<table>
+							<tbody>
+								<tr>
+									<td>제목</td>
+									<td><input type="text" name="title"></td>
+								</tr>
+								<tr>
+									<td>작성자</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td>내용</td>
+									<td><textarea rows="30" cols="120" name="message"></textarea></td>
+								</tr>
+								<tr>
+									<td>비밀번호</td>
+									<td><input type="password" name="password"></td>
+								</tr>
+							</tbody>
+						</table>
+						<input type="submit" value="글쓰기">
+					</form>
 				</div>
 			</div>
 		</div>
