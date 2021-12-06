@@ -17,4 +17,10 @@ public class ClothController {
 	public void mainPageGET() {
 		logger.info("메인 페이지 진입");
 	}
+	
+	//qna페이지
+	@RequestMapping(value = "/qna", method = RequestMethod.GET)
+	public void qnaPageGET() {
+		logger.info("qna 페이지 진입");
+	}
 }
