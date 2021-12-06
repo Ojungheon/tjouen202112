@@ -13,32 +13,6 @@
 	text-decoration: none;
 	list-style: none;
 }
-
-.category li {
-	width: 150px;
-	height: 50px;
-	border: 1px solid gray;
-	text-align: center;
-	float: left;
-	margin: 10px 20px 10px 20px;
-}
-
-.category {
-	width: calc(192px * 6);
-	height: 70px;
-	position: relative;
-	margin: 0 auto;
-}
-
-.selected {
-	background-color: darkgray;
-}
-
-table {
-	margin: 0 auto;
-	border-collapse: collapse;
-	border: 1px solid black;
-}
 </style>
 </head>
 <body>
@@ -121,38 +95,24 @@ table {
 		<div class="content_area">
 			<h3>Q&A 게시판</h3>
 			<hr>
-			<div class="category">
-				<ul>
-					<li id="all" onclick="choose('all')" class="selected">전체</li>
-					<li id="product" onclick="choose('product')">상품문의</li>
-					<li id="purDeliv" onclick="choose('purDeliv')">주문/배송문의</li>
-					<li id="exchange" onclick="choose('exchange')">교환/반품문의</li>
-					<li id="pay" onclick="choose('pay')">입금/결제문의</li>
-					<li id="other" onclick="choose('other')">기타문의</li>
-				</ul>
-			</div>
-			<br>
-			<hr>
 			<div class="qnaList">
 				<table>
-					<thead>
-						<tr>
-							<th style="width: 50px">번호</th>
-							<th style="width: 150px">상품정보</th>
-							<th style="width: 150px">카테고리</th>
-							<th style="width: 900px">제목</th>
-							<th style="width: 150px">작성자</th>
-							<th style="width: 150px">작성일</th>
-						</tr>
-					</thead>
 					<tbody>
 						<tr>
-							<td style="text-align: center">1</td>
-							<td style="text-align: center">아무상품</td>
-							<td style="text-align: center">상품문의</td>
-							<td style="text-align: left; padding-left: 20px;"><a href="qnaPasswordCheck">사이즈가 왜 이래요?</a></td>
-							<td style="text-align: center">지나가는사람</td>
-							<td style="text-align: center">2021-12-06</td>
+							<td>제목</td>
+							<td>사이즈가 왜 이래요?</td>
+						</tr>
+						<tr>
+							<td>번호</td>
+							<td>1</td>
+						</tr>
+						<tr>
+							<td>작성자</td>
+							<td>지나가던사람</td>
+						</tr>
+						<tr>
+							<td>내용</td>
+							<td>사이트에 올라온 사이즈표랑 실제랑 너무 차이나요.</td>
 						</tr>
 					</tbody>
 				</table>
