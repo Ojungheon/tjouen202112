@@ -47,4 +47,9 @@ public class ClothController {
 	public void writeQnaPOST() {
 		logger.info("qna 글쓰기 완료");
 	}
+	//상품 구매페이지
+	@RequestMapping(value = "/productPurchase", method = RequestMethod.GET)
+	public void purchaseGET() {
+		logger.info("구매 페이지");
+	}
 }
