@@ -145,7 +145,7 @@
 				<div class="best_item_area">
 					<ul class="lst_type">
 						<li>
-							<a href="#">
+							<a href="/productPurchase">
 								<span class="thumb"><img src="https://jb-shop.kr/web/product/big/202101/77ee04362e57ae9ef8930cfa1696a4ee.webp" width="300px" height="375px" alt=""></span>
 								<em>1997 양기모 후드 가격: 42000원</em>
 							</a>

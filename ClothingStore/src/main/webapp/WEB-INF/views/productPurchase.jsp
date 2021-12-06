@@ -5,6 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <title>productPurchase.jsp</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <link rel="stylesheet" href="resources/css/main.css">
 <style>
 .product_purchase{
@@ -15,12 +16,14 @@
 	width: 40%;
 	height: 100%;
 	float: left;
+	text-align: center;
+	margin-top: 20px;
 }
 .product_detail_area{
 	width: 60%;
 	height: 100%;
 }
-
+.layer {display: none;}
 </style>
 </head>
 <body>
@@ -112,12 +115,24 @@
 					<h2>상품명</h2><hr>
 					<h2>판매가</h2><hr>
 					<h2>배송비</h2><hr>
-					
+					<select name="color&amp;size" id="colorS" onchange="OnChange();">
+							<option value="" selected="selected">색상 및 사이즈</option>
+							<option value="option1">사이즈 1</option>
+							<option value="option2">사이즈 2</option>
+							<option value="option3">사이즈 3</option>
+					</select>
+					<div class="layer">
+					<p>상품명</p>
+					<input type="number">
+					<p>가격</p>
+					</div>
+					<input type="submit" value="구매하기">
+					<button>장바구니</button>
 				</div>
 			</div>
 			<br>
 			<hr>
-			<div class="qnaList">
+			<div class="CustomerReview">
 				<table>
 					<thead>
 						<tr>
@@ -141,7 +156,19 @@
 					</tbody>
 				</table>
 			</div>
-		
+			<script>
+			$(document).ready(function(){
+				$('#colorS').change(function(){
+					var result = $('#colorS option:selected').val();
+					if(result != ''){
+						$('.layer').show();
+					}else {
+						$('.layer').hide();
+					}
+				})
+			})
+			
+			</script>
 		</div>
 		<div class="foot_bar_area">
 			<h1>foot area</h1>
