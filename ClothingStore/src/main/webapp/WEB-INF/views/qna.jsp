@@ -45,7 +45,7 @@ table {
 <div class="wrapper">
 	<div class="wrap">
 		<div class="gnb_area">
-			로그인   회원가입  장바구니  마이페이지  커뮤니티   Q&A   Review
+			로그인   회원가입  장바구니  마이페이지  커뮤니티   <a href="qna">Q&A</a>   Review
 		</div>
 		<div class="top_area">
 			<div class="logo_area">
