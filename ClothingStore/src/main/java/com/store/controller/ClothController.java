@@ -50,6 +50,6 @@ public class ClothController {
 	//상품 구매페이지
 	@RequestMapping(value = "/productPurchase", method = RequestMethod.GET)
 	public void purchaseGET() {
-		logger.info("구매 페이지");
+		logger.info("구매 페이지 테스트");
 	}
 }
