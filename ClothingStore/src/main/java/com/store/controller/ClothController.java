@@ -23,4 +23,16 @@ public class ClothController {
 	public void qnaPageGET() {
 		logger.info("qna 페이지 진입");
 	}
+	
+	//qna게시글열람(비밀번호 입력)
+	@RequestMapping(value = "/qnaPasswordCheck", method = RequestMethod.GET)
+	public void qnaPasswordCheckGET() {
+		logger.info("qna 열람비밀번호 입력");
+	}
+	
+	//qna게시글열람(비밀번호 입력 후)
+	@RequestMapping(value = "/qnaOpen", method = RequestMethod.POST)
+	public void qnaOpen() {
+		logger.info("qna 게시글열람");
+	}
 }

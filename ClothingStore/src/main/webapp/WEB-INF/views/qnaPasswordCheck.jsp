@@ -104,26 +104,6 @@
 					<input type="submit" value="확인">
 				</form>
 			</div>
-			<script>
-		        const all = document.getElementById("all");
-		        const product = document.getElementById("product");
-		        const purDeliv = document.getElementById("purDeliv");
-		        const exchange = document.getElementById("exchange");
-		        const pay = document.getElementById("pay");
-		        const other = document.getElementById("other");
-		        function removeCategoryClass() {
-		            all.classList.remove("selected");
-		            product.classList.remove("selected");
-		            purDeliv.classList.remove("selected");
-		            exchange.classList.remove("selected");
-		            pay.classList.remove("selected");
-		            other.classList.remove("selected");
-		        }
-		        function choose(category) {
-		            removeCategoryClass();
-		            document.getElementById(category).classList.add("selected");
-		        }
-		    </script>
 		</div>
 		<div class="foot_bar_area">
 			<h1>foot area</h1>
