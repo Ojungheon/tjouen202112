@@ -35,4 +35,16 @@ public class ClothController {
 	public void qnaOpen() {
 		logger.info("qna 게시글열람");
 	}
+	
+	//qna 글쓰기
+	@RequestMapping(value = "/qnaWriteForm", method = RequestMethod.GET)
+	public void writeQnaGET() {
+		logger.info("qna 글쓰기");
+	}
+	
+	//qna 글등록
+	@RequestMapping(value = "/qnaWrite", method = RequestMethod.POST)
+	public void writeQnaPOST() {
+		logger.info("qna 글쓰기 완료");
+	}
 }
