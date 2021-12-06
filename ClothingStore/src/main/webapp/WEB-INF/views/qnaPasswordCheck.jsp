@@ -97,10 +97,10 @@
 			<hr>
 			<div class="qnaList">
 				<form action="qnaOpen" method="post">
-					게시판을 열람하려면
-					게시글 등록시 입력한
-					비밀번호를 입력하세요.
-					<input type="password" id="password" name="password">
+					Q&A 게시글을 열람하려면<br>
+					게시글 등록시 입력한<br>
+					비밀번호를 입력하세요.<br>
+					<input type="password" id="password" name="password"><br>
 					<input type="submit" value="확인">
 				</form>
 			</div>

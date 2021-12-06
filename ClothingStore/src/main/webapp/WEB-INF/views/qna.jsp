@@ -156,6 +156,7 @@ table {
 						</tr>
 					</tbody>
 				</table>
+				<a href="qnaWrite">글쓰기</a>
 			</div>
 			<script>
 		        const all = document.getElementById("all");

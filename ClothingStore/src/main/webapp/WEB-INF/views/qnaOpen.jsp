@@ -13,6 +13,17 @@
 	text-decoration: none;
 	list-style: none;
 }
+/* .qnaArea{
+	height: 700px;
+} */
+.qnaOpen{
+	border: 1px solid black;
+	width: 100%;
+	border-collapse: collapse;
+}
+table>tbody>tr>td{
+	border: 1px solid black;
+}
 </style>
 </head>
 <body>
@@ -93,29 +104,34 @@
 			</div>
 		</div>
 		<div class="content_area">
-			<h4>Q&A 게시판</h4>
-			<hr>
-			<div class="qnaList">
-				<table>
-					<tbody>
-						<tr>
-							<td>제목</td>
-							<td>사이즈가 왜 이래요?</td>
-						</tr>
-						<tr>
-							<td>번호</td>
-							<td>1</td>
-						</tr>
-						<tr>
-							<td>작성자</td>
-							<td>지나가던사람</td>
-						</tr>
-						<tr>
-							<td>내용</td>
-							<td>사이트에 올라온 사이즈표랑 실제랑 너무 차이나요.</td>
-						</tr>
-					</tbody>
-				</table>
+			<div class="qnaArea">
+				<h4>Q&A 게시판</h4>
+				<hr>
+				<div class="qnaList">
+					<table class="qnaOpen">
+						<tbody>
+							<tr>
+								<td style="height:20px">제목</td>
+								<td>사이즈가 왜 이래요?</td>
+							</tr>
+							<tr>
+								<td style="height:20px">번호</td>
+								<td>1</td>
+							</tr>
+							<tr>
+								<td style="height:20px">작성자</td>
+								<td>지나가던사람</td>
+							</tr>
+							<tr>
+								<td style="height:300px">내용</td>
+								<td>
+									사이트에 올라온 사이즈표랑 실제랑 너무 차이나요.<br>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+					<a href="qna">목록보기</a>
+				</div>
 			</div>
 			<script>
 		        const all = document.getElementById("all");
