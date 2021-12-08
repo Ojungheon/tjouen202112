@@ -38,7 +38,14 @@
 				<a href="/main"><img src="resources/img/SOJ Fashion.png"></a>
 			</div>
 			<div class="search_area">
-				<h1>search area</h1>
+				<table class="search_table">
+					<tbody>
+						<tr class="search_box">
+							<td class="search_input"><input class="search_input_box" type="text" name="txt_search"></td>
+							<td class="run_search">검색</td>
+						</tr>
+					</tbody>
+				</table>
 			</div>
 			<div class="clearfix"></div>
 		</div>
