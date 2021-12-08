@@ -17,6 +17,12 @@
     ul.myMenu > li:hover ul.community_sub {display: block;}
     ul.myMenu > li ul.community_sub > li { display:inline-block; width:80px; padding:5px 10px; background:#eee; text-align:center; }
     ul.myMenu > li ul.community_sub > li:hover { background:#fff; }
+    
+    table {
+	margin: 0 auto;
+	border-collapse: collapse;
+	border: 1px solid black;
+}
 </style>
 </head>
 <body>
@@ -46,7 +52,14 @@
 				<a href="/main"><img src="resources/img/SOJ Fashion.png"></a>
 			</div>
 			<div class="search_area">
-				<h1>search area</h1>
+				<table class="search_table">
+					<tbody>
+						<tr class="search_box">
+							<td class="search_input"><input class="search_input_box" type="text" name="txt_search"></td>
+							<td class="run_search">검색</td>
+						</tr>
+					</tbody>
+				</table>
 			</div>
 			<div class="clearfix"></div>
 		</div>
@@ -111,47 +124,41 @@
 			</div>
 		</div>
 		<div class="content_area">
-			<h4>공지사항&이벤트</h4>
+			<h3>공지사항&이벤트</h3>
 			<hr>
-			<div class="category">
-				<ul>
-					<li id="all" onclick="choose('all')" class="selected">전체</li>
-					<li id="product" onclick="choose('product')">상품문의</li>
-					<li id="purDeliv" onclick="choose('purDeliv')">주문/배송문의</li>
-					<li id="exchange" onclick="choose('exchange')">교환/반품문의</li>
-					<li id="pay" onclick="choose('pay')">입금/결제문의</li>
-					<li id="other" onclick="choose('other')">기타문의</li>
-				</ul>
-			</div>
-			<br>
-			<hr>
-			<div class="qnaList">
+			<p>공지사항&이벤트 입니다.
+			<div class="noticeList">
 				<table>
 					<thead>
 						<tr>
 							<th style="width: 50px">번호</th>
-							<th style="width: 150px">상품정보</th>
-							<th style="width: 150px">카테고리</th>
-							<th style="width: 900px">제목</th>
-							<th style="width: 150px">작성자</th>
-							<th style="width: 150px">작성일</th>
+							<th style="width: 1100px">제목</th>
+							<th style="width: 200px">작성자</th>
+							<th style="width: 200px">작성일</th>
 						</tr>
 					</thead>
 					<tbody>
 						<tr>
-							<td style="text-align: center">1</td>
-							<td style="text-align: center">아무상품</td>
-							<td style="text-align: center">상품문의</td>
-							<td style="text-align: left; padding-left: 20px;"><a href="qnaPasswordCheck">사이즈가 왜 이래요?</a></td>
-							<td style="text-align: center">지나가는사람</td>
+							<td style="text-align: center">공지</td>
+							<td style="text-align: left; padding-left: 30px;">★SOJ 회원등급 혜택★</td>
+							<td style="text-align: center">관리자</td>
 							<td style="text-align: center">2021-12-06</td>
 						</tr>
+						<tr>
+							<td style="text-align: center">1</td>
+							<td style="text-align: left; padding-left: 30px;">앱 다운 혜택</td>
+							<td style="text-align: center">관리자</td>
+							<td style="text-align: center">2021-12-08</td>
+						</tr>
+						
+						
 					</tbody>
 				</table>
 				<a href="qnaWriteForm">글쓰기</a>
 			</div>
-			<div class="foot_bar_area">
-				<h1>foot area</h1>
+				<div class="foot_bar_area">
+					<h1>foot area</h1>
+				</div>
 			</div>
 		</div>
 	</div>

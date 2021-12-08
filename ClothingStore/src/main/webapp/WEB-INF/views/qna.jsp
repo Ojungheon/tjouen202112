@@ -40,13 +40,38 @@ table {
 	border-collapse: collapse;
 	border: 1px solid black;
 }
+ ul, ol, li { list-style:none; margin:0; padding:0; }
+   
+    ul.myMenu {}
+    ul.myMenu > li { display:inline-block; width:80px; padding:5px 10px; background:#eee; border:1px solid #eee;  text-align:center; position: relative;}
+    ul.myMenu > li:hover { background:#fff; }
+    ul.myMenu > li ul.community_sub { display:none; position: absolute; top:30px; left:0; }
+    ul.myMenu > li:hover ul.community_sub {display: block;}
+    ul.myMenu > li ul.community_sub > li { display:inline-block; width:80px; padding:5px 10px; background:#eee; text-align:center; }
+    ul.myMenu > li ul.community_sub > li:hover { background:#fff; }
 </style>
 </head>
 <body>
 <div class="wrapper">
 	<div class="wrap">
 		<div class="gnb_area">
-			<a href="member/login">로그인</a>   <a href="member/join">회원가입</a>  장바구니  마이페이지  커뮤니티   <a href="qna">Q&A</a>   Review
+			<div class="gnb_area" id="container">
+			<ul class="myMenu">
+				<li class="menu1"><a href="member/login">로그인</a></li>
+				<li class="menu2"><a href="member/join">회원가입</a></li>
+				<li class="menu3">장바구니</li>
+				<li class="menu4">마이페이지</li>
+				<li class="menu5">
+					커뮤니티
+					<ul class="community_sub">
+						<li><a href="notice">공지사항&이벤트</a></li>
+						<li>Q&A</li>
+						<li>Review</li>	
+					</ul>
+				</li>
+				<li class="menu6"><a href="qna">Q&A</a></li>
+				<li class="menu7">Review</li>
+			</ul>
 		</div>
 		<div class="top_area">
 			<div class="logo_area">
@@ -187,8 +212,9 @@ table {
 		        }
 		    </script>
 		</div>
-		<div class="foot_bar_area">
-			<h1>foot area</h1>
+			<div class="foot_bar_area">
+				<h1>foot area</h1>
+			</div>
 		</div>
 	</div>
 </div>
