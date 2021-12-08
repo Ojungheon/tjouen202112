@@ -58,7 +58,7 @@
 				<li class="menu5">
 					커뮤니티
 					<ul class="community_sub">
-						<li>공지사항&이벤트</li>
+						<li><a href="notice">공지사항&이벤트</a></li>
 						<li>Q&A</li>
 						<li>Review</li>	
 					</ul>
