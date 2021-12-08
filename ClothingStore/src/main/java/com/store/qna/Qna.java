@@ -4,7 +4,7 @@ import java.time.LocalDateTime;
 
 public class Qna {
 	private int id;
-	private int customerId;
+	private String memberId;
 	private int productId;
 	private int optionId;
 	private String category;
@@ -13,11 +13,11 @@ public class Qna {
 	private LocalDateTime writeDate;
 	private String password;
 	public Qna() {}
-	public Qna(int id, int customerId, int productId, int optionId, String category, String title, String message,
+	public Qna(int id, String memberId, int productId, int optionId, String category, String title, String message,
 			LocalDateTime writeDate, String password) {
 		super();
 		this.id = id;
-		this.customerId = customerId;
+		this.memberId = memberId;
 		this.productId = productId;
 		this.optionId = optionId;
 		this.category = category;
@@ -32,11 +32,11 @@ public class Qna {
 	public void setId(int id) {
 		this.id = id;
 	}
-	public int getCustomerId() {
-		return customerId;
+	public String getMemberId() {
+		return memberId;
 	}
-	public void setCustomerId(int customerId) {
-		this.customerId = customerId;
+	public void setMemberId(String memberId) {
+		this.memberId = memberId;
 	}
 	public int getProductId() {
 		return productId;
@@ -82,7 +82,7 @@ public class Qna {
 	}
 	@Override
 	public String toString() {
-		return "Qna [id=" + id + ", customerId=" + customerId + ", productId=" + productId + ", optionId=" + optionId
+		return "Qna [id=" + id + ", memberId=" + memberId + ", productId=" + productId + ", optionId=" + optionId
 				+ ", category=" + category + ", title=" + title + ", message=" + message + ", writeDate=" + writeDate
 				+ ", password=" + password + "]";
 	}
