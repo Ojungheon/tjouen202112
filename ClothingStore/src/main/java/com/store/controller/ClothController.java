@@ -52,4 +52,9 @@ public class ClothController {
 	public void purchaseGET() {
 		logger.info("구매 페이지 테스트");
 	}
+	//notice페이지
+		@RequestMapping(value = "/notice", method = RequestMethod.GET)
+		public void noticePageGET() {
+			logger.info("notice 페이지 진입");
+	}
 }
