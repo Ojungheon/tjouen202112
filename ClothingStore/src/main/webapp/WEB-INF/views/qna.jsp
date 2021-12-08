@@ -21,6 +21,7 @@
 	text-align: center;
 	float: left;
 	margin: 10px 20px 10px 20px;
+	line-height: 50px;
 }
 
 .category {
