@@ -21,8 +21,8 @@ public class MemberController {
 	private MemberService memberservice;
 	
 	//회원가입 페이지 이동
-	@RequestMapping(value = "join", method = RequestMethod.GET)
-	public void joinGET() {
+	@RequestMapping(value = "/join", method = RequestMethod.GET)
+	public void loginGET() {
 		
 		logger.info("회원가입 페이지 진입");
 				
@@ -44,8 +44,8 @@ public class MemberController {
 		}
 	
 	//로그인 페이지 이동
-	@RequestMapping(value = "login", method = RequestMethod.GET)
-	public void loginGET() {
+	@RequestMapping(value = "/login", method = RequestMethod.GET)
+	public void joinGET() {
 		
 		logger.info("로그인 페이지 진입");
 		
@@ -60,18 +60,15 @@ public class MemberController {
 			
 			int result = memberservice.idCheck(memberId);
 			
-			logger.info("결과값 = " + result);
+			logger.info("결과값 = "+result);
 			
-			if(result != 0) {
-				
-				return "fail";	// 중복 아이디가 존재
-				
-			} else {
-				
-				return "success";	// 중복 아이디 x
-				
-			}	
+			if(result !=0) {
+				return "fail"; //중복 아이디가 존재
+			}else {
+				return "success"; //중복 아이디 x
 			
-		} // memberIdChkPOST() 종료	
+		} // memberIdChkPOST() 종료
+		
+}
 	
 }

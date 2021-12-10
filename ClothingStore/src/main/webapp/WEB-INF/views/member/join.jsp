@@ -124,7 +124,7 @@ $('.id_input').on("propertychange change keyup paste input", function(){
 	$.ajax({
 		type : "post",
 		url : "/member/memberIdChk",
-		data : data
+		data : data,
 		success : function(result){
 			//console.log("성공 여부" + result);
 			if(result != 'fail'){

@@ -15,6 +15,7 @@ public class MemberMapperTests {
 	@Autowired
 	private MemberMapper memberMapper;  //MemberMapper.java 인터페이스 의존성 주입
 	
+	/*
 	//회원가입 쿼리 테스트 메서드
 	@Test
 	public void memberJoin() throws Exception{
@@ -29,5 +30,13 @@ public class MemberMapperTests {
 		member.setMemberAddr3("spring test");	//회원 상세주소
 			
 		memberMapper.memberJoin(member);		//쿼리 메서드 실행
+	}
+	*/
+	@Test
+	public void memberIdChk() throws Exception{
+		String id = "admin";	// 존재하는 아이디
+		String id2 = "test123";	// 존재하지 않는 아이디
+		memberMapper.idCheck(id);
+		memberMapper.idCheck(id2);
 	}
 }
