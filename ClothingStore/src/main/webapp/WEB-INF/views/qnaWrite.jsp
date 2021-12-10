@@ -1,10 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
-<title>질문답변게시판</title>
+<title>Insert title here</title>
 <link rel="stylesheet" href="resources/css/main.css">
 <style>
 * {
@@ -16,17 +16,6 @@
 /* .qnaArea{
 	height: 700px;
 } */
-table{
-	border: 1px solid black;
-	width: 100%;
-	border-collapse: collapse;
-}
-table>tbody>tr>td{
-	border: 1px solid black;
-}
-#title{
-	width: 850px;
-}
 </style>
 </head>
 <body>
@@ -114,83 +103,14 @@ table>tbody>tr>td{
 			</div>
 		</div>
 		<div class="content_area">
-			<div class="qnaArea">
-				<h4>Q&A 게시판</h4>
-				<hr>
-				<div class="qnaList">
-					<form action="qnaWrite" name="writeQna" method="post">
-						<table>
-							<tbody>
-								<tr>
-								<!-- 상품문의, 주문/배송문의, 교환/반품문의, 입금/결제문의, 기타문의 -->
-									<td>카테고리</td>
-									<td>
-										<select name="category" id="category">
-											<option value="상품문의">상품문의
-											<option value="주문/배송문의">주문/배송문의
-											<option value="교환/반품문의">교환/반품문의
-											<option value="입금/결제문의">입금/결제문의
-											<option value="기타문의">기타문의
-										</select>
-									</td>
-								</tr>
-								<tr>
-									<td>제목</td>
-									<td><input type="text" name="title" id="title"></td>
-								</tr>
-								<tr>
-									<td>작성자</td>
-									<td><input type="text" name="name" id="name" readonly="readonly" value="지나가는사람"></td>
-								</tr>
-								<tr>
-									<td>상품정보</td>
-									<td></td>
-								</tr>
-								<tr>
-									<td>내용</td>
-									<td><textarea rows="30" cols="120" name="message" id="message"></textarea></td>
-								</tr>
-								<tr>
-									<td>비밀번호</td>
-									<td><input type="password" name="password" id="password"></td>
-								</tr>
-							</tbody>
-						</table>
-						<input type="submit" value="글쓰기">
-					</form>
-				</div>
-			</div>
+			<h1>${result }</h1>
+			<a href="qna">목록보기</a>
 		</div>
 		<div class="foot_bar_area">
 			<h1>foot area</h1>
 		</div>
 	</div>
 </div>
-<script>
-	let writeQna = document.writeQna;
-	writeQna.onsubmit = function(){
-		let getTitle = document.getElementById("title");
-		let titleValue = getTitle.value.trim();
-		if(titleValue == ""){
-			alert("제목을 입력하세요.");
-			getTitle.focus();
-			return false;
-		}
-		let getMessage = document.getElementById("message");
-		let messageValue = getMessage.value.trim();
-		if(messageValue == ""){
-			alert("내용을 입력하세요.");
-			getMessage.focus();
-			return false;
-		}
-		let getPassword = document.getElementById("password");
-		let passwordValue = getPassword.value.trim();
-		if(passwordValue == ""){
-			alert("비밀번호를 입력하세요.");
-			getPassword.focus();
-			return false;
-		}
-	}
-</script>
+	
 </body>
 </html>

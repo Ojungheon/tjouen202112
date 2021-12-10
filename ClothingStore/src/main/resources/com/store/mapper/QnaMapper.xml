@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.store.mapper.QnaMapper">
+<!-- Columns of table 'qna' 
+id, member_id, product_id, option_id, category, title, message, write_date, password -->
+
+<!-- Qna 게시판 글 등록 -->
+	<insert id="insertQna" parameterType="Qna" keyProperty="id">
+		insert into qna(id, member_id, product_id, option_id, category, title, message, write_date, password) 
+		values(#{id}, #{memberId}, #{productId}, #{optionId}, #{category}, #{title}, #{message}, #{writeDate}, #{password})
+	</insert>
+
+</mapper>

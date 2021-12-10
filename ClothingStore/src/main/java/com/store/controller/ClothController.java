@@ -2,15 +2,23 @@ package com.store.controller;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+
+import com.store.qna.Qna;
+import com.store.service.QnaService;
 
 
 @Controller
 public class ClothController {
 
 	private static final Logger logger = LoggerFactory.getLogger(ClothController.class);
+	
+	@Autowired
+	QnaService qnaService;
 
 	//메인페이지 이동
 	@RequestMapping(value = "/main", method = RequestMethod.GET)
@@ -44,8 +52,10 @@ public class ClothController {
 
 	//qna 글등록
 	@RequestMapping(value = "/qnaWrite", method = RequestMethod.POST)
-	public void writeQnaPOST() {
+	public void writeQnaPOST(Qna qna, Model model) {
 		logger.info("qna 글쓰기 완료");
+		String result = qnaService.registerQna(qna);
+		model.addAttribute("result", result);
 	}
 	//상품 구매페이지
 	@RequestMapping(value = "/productPurchase", method = RequestMethod.GET)

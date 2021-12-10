@@ -2,6 +2,8 @@ package com.store.qna;
 
 import java.time.LocalDateTime;
 
+import org.springframework.format.annotation.DateTimeFormat;
+
 public class Qna {
 	private int id;
 	private String memberId;
@@ -10,6 +12,7 @@ public class Qna {
 	private String category;
 	private String title;
 	private String message;
+	@DateTimeFormat(pattern = "yyyy-MM-dd'T'HH:mm:ss")
 	private LocalDateTime writeDate;
 	private String password;
 	public Qna() {}
