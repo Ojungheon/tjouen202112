@@ -118,7 +118,7 @@ table>tbody>tr>td{
 				<h4>Q&A 게시판</h4>
 				<hr>
 				<div class="qnaList">
-					<form action="qnaWrite" method="post">
+					<form action="qnaWrite" name="writeQna" method="post">
 						<table>
 							<tbody>
 								<tr>
@@ -166,6 +166,31 @@ table>tbody>tr>td{
 		</div>
 	</div>
 </div>
-	
+<script>
+	let writeQna = document.writeQna;
+	writeQna.onsubmit = function(){
+		let getTitle = document.getElementById("title");
+		let titleValue = getTitle.value.trim();
+		if(titleValue == ""){
+			alert("제목을 입력하세요.");
+			getTitle.focus();
+			return false;
+		}
+		let getMessage = document.getElementById("message");
+		let messageValue = getMessage.value.trim();
+		if(messageValue == ""){
+			alert("내용을 입력하세요.");
+			getMessage.focus();
+			return false;
+		}
+		let getPassword = document.getElementById("password");
+		let passwordValue = getPassword.value.trim();
+		if(passwordValue == ""){
+			alert("비밀번호를 입력하세요.");
+			getPassword.focus();
+			return false;
+		}
+	}
+</script>
 </body>
 </html>
