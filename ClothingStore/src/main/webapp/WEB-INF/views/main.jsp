@@ -70,7 +70,7 @@
 		</div>
 		<div class="top_area">
 			<div class="logo_area">
-				<a href="/main"><img src="resources/img/SOJ Fashion.png"></a>
+				<a href="/main"><img src="resources/img/SOJ Fashion.png" width="100%" height="100%"></a>
 			</div>
 			<div class="search_area">
 				<table class="search_table">
