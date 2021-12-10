@@ -6,6 +6,17 @@
 <meta charset="UTF-8">
 <title>상품 검색 결과</title>
 <link rel="stylesheet" href="resources/css/main.css">
+<style>
+ ul, ol, li { list-style:none; margin:0; padding:0; }
+   
+    ul.myMenu {}
+    ul.myMenu > li { display:inline-block; width:80px; padding:5px 10px; background:#eee; border:1px solid #eee;  text-align:center; position: relative;}
+    ul.myMenu > li:hover { background:#fff; }
+    ul.myMenu > li ul.community_sub { display:none; position: absolute; top:30px; left:0; }
+    ul.myMenu > li:hover ul.community_sub {display: block;}
+    ul.myMenu > li ul.community_sub > li { display:inline-block; width:80px; padding:5px 10px; background:#eee; text-align:center; }
+    ul.myMenu > li ul.community_sub > li:hover { background:#fff; }
+</style>
 </head>
 <body>
 <div class="wrapper">
