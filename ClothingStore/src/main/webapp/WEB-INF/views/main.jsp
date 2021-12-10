@@ -21,6 +21,14 @@
 <script type="text/javascript">
 	$(function () {
 		var cnt = 0;
+		interv = setInterval(() => {
+			$(".mySlides>ul").animate(
+					{"margin-left":"-1080px"},500,
+					function(){
+						$(".mySlides>ul").css("margin-left","0px");
+						$(".mySlides>ul").append($(this).children().eq(0))
+					})
+        }, 10000);
 		$(".mySlides>a").last().click(function(){
 			$(".mySlides>ul").animate(
 				{"margin-left":"-1080px"},500,
