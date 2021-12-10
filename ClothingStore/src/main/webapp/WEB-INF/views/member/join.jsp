@@ -64,21 +64,21 @@
 				<div class="address_name">주소</div>
 				<div class="address_input_1_wrap">
 					<div class="address_input_1_box">
-						<input class="address_input_1">
+						<input class="address_input_1" name="memberAddr1">
 					</div>
-					<div class="address_button">
+					<div class="address_button" onclick="execution_daum_address()">
 						<span>주소 찾기</span>
 					</div>
 					<div class="clearfix"></div>
 				</div>
 				<div class ="address_input_2_wrap">
 					<div class="address_input_2_box">
-						<input class="address_input_2">
+						<input class="address_input_2" name="memberAddr2">
 					</div>
 				</div>
 				<div class ="address_input_3_wrap">
 					<div class="address_input_3_box">
-						<input class="address_input_3">
+						<input class="address_input_3" name="memberAddr3">
 					</div>
 				</div>
 			</div>
@@ -88,7 +88,22 @@
 		</div>
 	</form>
 </div>
+
+<script src="https://t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
 <script>
+
+var code = "";  //이메일전송 인증번호 저장위한 코드
+
+/* 유효성 검사 통과유무 변수 */
+var idCheck = false;    	//아이디
+var idckCheck = false;  	//아이디 중복 검사
+var pwCheck = false;    	//비번
+var pwcCheck = false;   	//비번 확인
+var pwckcorCheck = false; 	//비번 확인 일치 확인
+var nameCheck = false;  	//이름
+var mailCheck = false;		//이메일
+var mailnumCheck = false;	//이메일 인증번호 확인
+var addressCheck = false;	//주소
 
 $(document).ready(function(){
 	//회원가입 버튼(회원가입 기능 작동)
@@ -125,6 +140,18 @@ $('.id_input').on("propertychange change keyup paste input", function(){
 	
 });// function 종료
 
+/* 다음 주소 연동 */
+function execution_daum_address(){
+ 
+    new daum.Postcode({
+        oncomplete: function(data) {
+            // 팝업에서 검색결과 항목을 클릭했을때 실행할 코드를 작성하는 부분입니다.
+            
+ 
+        }
+    }).open();    
+ 
+}
 </script>
 
 </body>

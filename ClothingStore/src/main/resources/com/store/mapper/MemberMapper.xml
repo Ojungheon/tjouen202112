@@ -5,7 +5,9 @@
   <mapper namespace="com.store.mapper.MemberMapper">
 
 <!-- 회원가입 -->
-
+	<insert id="memberJoin">
+		insert into member values(#{memberId}, #{memberPw}, #{memberName}, #{memberMail}, #{memberAddr1}, #{memberAddr2}, #{memberAddr3}, 0, now(), 100000, 5000)
+	</insert>
 <!-- 아이디 중복검사 -->
 
   </mapper>
