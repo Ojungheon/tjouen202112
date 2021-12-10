@@ -56,7 +56,7 @@
 					<tbody>
 						<tr class="search_box">
 							<td class="search_input"><input class="search_input_box" type="text" name="txt_search"></td>
-							<td class="run_search">검색</td>
+							<td class="run_search" ><a href="searchResult">검색</a></td>
 						</tr>
 					</tbody>
 				</table>

@@ -4,45 +4,154 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>상품 검색 결괴</title>
+<title>상품 검색 결과</title>
+<link rel="stylesheet" href="resources/css/main.css">
 </head>
 <body>
-	<h1>상세검색</h1>
-	<hr>
-	<fieldset>
-		상품분류 <select name="category">
-			<option value="new">new</option>
-			<option value="best">best</option>
-			<option value="sale">sale</option>
-			<option value="top">상의</option>
-			<option value="outer">아우터</option>
-			<option value="bottom">하의</option>
-			<option value="set">세트</option>
-			<option value="etc">잡화</option>
-		</select><br>
-        검색조건 <select name="condition">
-            <option>상품명</option>
-            <option>브랜드</option>
-        </select>
-        <input type="text" placeholder="검색어 입력"><br>
-        정렬기준 <select name="order1">
-            <option value="name">상품명 순</option>
-            <option value="prodDate">신상품 순</option>
-            <option value="lowPrice">낮은 가격순</option>
-            <option value="highPrice">높은 가격순</option>
-            <option value="review">사용후기 순</option>
-        </select><br>
-        가격대 <input type="number" name="minPrice">~<input type="number" name="maxPrice"> <button>상품검색</button>
-	</fieldset>
-    <h1>검색결과</h1>
-    <select name="order2"> 
-        <option value="name">상품명 순</option>
-        <option value="prodDate">신상품 순</option>
-        <option value="lowPrice">낮은 가격순</option>
-        <option value="highPrice">높은 가격순</option>
-        <option value="review">사용후기 순</option>
-    </select>   정렬 
-    <input type="number" name="searchResult" readonly="readonly" value="11">Items
-    <hr>
+<div class="wrapper">
+	<div class="wrap">
+		<div class="gnb_area">
+			<div class="gnb_area" id="container">
+			<ul class="myMenu">
+				<li class="menu1"><a href="member/login">로그인</a></li>
+				<li class="menu2"><a href="member/join">회원가입</a></li>
+				<li class="menu3">장바구니</li>
+				<li class="menu4">마이페이지</li>
+				<li class="menu5">
+					커뮤니티
+					<ul class="community_sub">
+						<li><a href="notice">공지사항&이벤트</a></li>
+						<li>Q&A</li>
+						<li>Review</li>	
+					</ul>
+				</li>
+				<li class="menu6"><a href="qna">Q&A</a></li>
+				<li class="menu7">Review</li>
+			</ul>
+		</div>
+		<div class="top_area">
+			<div class="logo_area">
+				<a href="/main"><img src="resources/img/SOJ Fashion.png"></a>
+			</div>
+			<div class="search_area">
+				<table class="search_table">
+					<tbody>
+						<tr class="search_box">
+							<td class="search_input"><input class="search_input_box" type="text" name="txt_search"></td>
+							<td class="run_search" ><a href="searchResult">검색</a></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+		<div class="navi_bar_area">
+			<div id="menu">
+				<ul>
+					<li><a href="#">NEW</a>
+						<ul>
+							<li><a href="#1">sub_menu</a></li>
+							<li><a href="#1">sub_menu2</a></li>
+							<li><a href="#1">sub_menu3</a></li>
+						</ul>
+					</li>
+					<li><a href="#">BEST50</a>
+						<ul>
+							<li><a href="#1">sub_menu</a></li>
+							<li><a href="#1">sub_menu2</a></li>
+							<li><a href="#1">sub_menu3</a></li>
+						</ul>
+					</li>
+					<li><a href="#">SALE</a>
+						<ul>
+							<li><a href="#1">sub_menu</a></li>
+							<li><a href="#1">sub_menu2</a></li>
+							<li><a href="#1">sub_menu3</a></li>
+						</ul>
+					</li>
+					<li><a href="#">상의</a>
+						<ul>
+							<li><a href="#1">sub_menu</a></li>
+							<li><a href="#1">sub_menu2</a></li>
+							<li><a href="#1">sub_menu3</a></li>
+						</ul>
+					</li>
+					<li><a href="#">아우터</a>
+						<ul>
+							<li><a href="#1">sub_menu</a></li>
+							<li><a href="#1">sub_menu2</a></li>
+							<li><a href="#1">sub_menu3</a></li>
+						</ul>
+					</li>
+					<li><a href="#">하의</a>
+						<ul>
+							<li><a href="#1">sub_menu</a></li>
+							<li><a href="#1">sub_menu2</a></li>
+							<li><a href="#1">sub_menu3</a></li>
+						</ul>
+					</li>
+					<li><a href="#">세트</a>
+						<ul>
+							<li><a href="#1">sub_menu</a></li>
+							<li><a href="#1">sub_menu2</a></li>
+							<li><a href="#1">sub_menu3</a></li>
+						</ul>
+					</li>
+					<li><a href="#">잡화</a>
+						<ul>
+							<li><a href="#1">sub_menu</a></li>
+							<li><a href="#1">sub_menu2</a></li>
+							<li><a href="#1">sub_menu3</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="content_area">
+			<h1>상세검색</h1>
+			<hr>
+			<fieldset>
+				상품분류 <select name="category">
+					<option value="new">new</option>
+					<option value="best">best</option>
+					<option value="sale">sale</option>
+					<option value="top">상의</option>
+					<option value="outer">아우터</option>
+					<option value="bottom">하의</option>
+					<option value="set">세트</option>
+					<option value="etc">잡화</option>
+				</select><br>
+		        검색조건 <select name="condition">
+		            <option>상품명</option>
+		            <option>브랜드</option>
+		        </select>
+		        <input type="text" placeholder="검색어 입력"><br>
+		        정렬기준 <select name="order1">
+		            <option value="name">상품명 순</option>
+		            <option value="prodDate">신상품 순</option>
+		            <option value="lowPrice">낮은 가격순</option>
+		            <option value="highPrice">높은 가격순</option>
+		            <option value="review">사용후기 순</option>
+		        </select><br>
+		        가격대 <input type="number" name="minPrice">~<input type="number" name="maxPrice"> <button>상품검색</button>
+			</fieldset>
+		    <h1>검색결과</h1>
+		    <select name="order2"> 
+		        <option value="name">상품명 순</option>
+		        <option value="prodDate">신상품 순</option>
+		        <option value="lowPrice">낮은 가격순</option>
+		        <option value="highPrice">높은 가격순</option>
+		        <option value="review">사용후기 순</option>
+		    </select>   정렬 
+		    <input type="number" name="searchResult" readonly="readonly" value="11">Items
+		    <hr>
+		</div>
+			<div class="foot_bar_area">
+				<h1>foot area</h1>
+			</div>
+		</div>
+	</div>
+</div>
+	
 </body>
 </html>
