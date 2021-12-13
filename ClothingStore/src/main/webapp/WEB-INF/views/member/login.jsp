@@ -4,8 +4,8 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
-<link rel="stylesheet" href="/resources/css/member/login.css">
+<title>로그인</title>
+<link rel="stylesheet" href="${path}/resources/css/member/login.css">
 </head>
 <body>
 
@@ -13,7 +13,7 @@
 	
 	<div class="wrap">
 		<div class="logo_wrap">
-			<span>Book Mall</span>
+			<span>SOJ Mall</span>
 		</div>
 		<div class="login_wrap"> 
 			<div class="id_wrap">
