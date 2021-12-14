@@ -19,7 +19,7 @@ public class QnaServiceTest {
 	QnaService qnaService;
 
 	@Test
-	@Ignore
+//	@Ignore
 	public void registerTest() {
 		
 		for (int i = 1; i <= 500; i++) {
@@ -40,6 +40,7 @@ public class QnaServiceTest {
 	}
 	
 	@Test
+	@Ignore
 	public void select테스트() {
 		int pageNumber = 1;
 		QnaListView qnaListView = qnaService.viewQnaList(pageNumber);
