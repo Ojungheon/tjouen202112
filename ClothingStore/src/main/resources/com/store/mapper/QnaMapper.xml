@@ -11,5 +11,20 @@ id, member_id, product_id, option_id, category, title, message, write_date, pass
 		insert into qna(id, member_id, product_id, option_id, category, title, message, write_date, password) 
 		values(#{id}, #{memberId}, #{productId}, #{optionId}, #{category}, #{title}, #{message}, #{writeDate}, #{password})
 	</insert>
-
+<!-- Qna 게시판 조회 관련 -->
+<!-- 전체 Qna 개수 조회 -->
+	<select id="selectCountQna" resultType="int">
+		select count(id) from qna;
+	</select>
+	
+<!-- 한 페이지에 보여줄 Qna 리스트 조회 -->
+	<select id="selectQnaPerPage" resultType="Qna">
+		select id, member_id, product_id, option_id, category, title, message, write_date, password 
+		from qna order by id desc limit #{firstRow}, #{qnaCountPerPage}
+	</select>
+<!-- 게시판 글 하나 조회 -->
+	<select id="selectOneById" resultType="Qna">
+		select id, member_id, product_id, option_id, category, title, message, write_date, password 
+		from qna where id=#{id}
+	</select>
 </mapper>

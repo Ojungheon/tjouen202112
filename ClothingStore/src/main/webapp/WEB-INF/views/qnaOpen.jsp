@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -115,29 +116,34 @@ table>tbody>tr>td{
 				<h4>Q&A 게시판</h4>
 				<hr>
 				<div class="qnaList">
-					<table class="qnaOpen">
-						<tbody>
-							<tr>
-								<td style="height:20px">제목</td>
-								<td>사이즈가 왜 이래요?</td>
-							</tr>
-							<tr>
-								<td style="height:20px">번호</td>
-								<td>1</td>
-							</tr>
-							<tr>
-								<td style="height:20px">작성자</td>
-								<td>지나가던사람</td>
-							</tr>
-							<tr>
-								<td style="height:300px">내용</td>
-								<td>
-									사이트에 올라온 사이즈표랑 실제랑 너무 차이나요.<br>
-								</td>
-							</tr>
-						</tbody>
-					</table>
-					수정    삭제    <a href="qna">목록보기</a>
+					<c:if test="${result == null }">
+						비밀번호가 일치하지 않습니다.<br>
+					</c:if>
+					<c:if test="${result != null }">
+						<table class="qnaOpen">
+							<tbody>
+								<tr>
+									<td style="height:20px; width:90px;">제목</td>
+									<td>${result.title }</td>
+								</tr>
+								<tr>
+									<td style="height:20px; width:90px;">번호</td>
+									<td>${result.id }</td>
+								</tr>
+								<tr>
+									<td style="height:20px; width:90px;">작성자</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td style="height:300px; width:90px;">내용</td>
+									<td>
+										${result.message }<br>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						수정    삭제    <a href="qna">목록보기</a>
+					</c:if>
 				</div>
 			</div>
 		</div>

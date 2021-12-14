@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -180,15 +181,41 @@ table {
 					</thead>
 					<tbody>
 						<tr>
-							<td style="text-align: center">1</td>
-							<td style="text-align: center">아무상품</td>
-							<td style="text-align: center">상품문의</td>
-							<td style="text-align: left; padding-left: 20px;"><a href="qnaPasswordCheck">사이즈가 왜 이래요?</a></td>
-							<td style="text-align: center">지나가는사람</td>
-							<td style="text-align: center">2021-12-06</td>
+							<c:if test="${qLV.qnaTotalCount==0 }">
+								<tr>
+									<td style="text-align: center"></td>
+									<td style="text-align: center"></td>
+									<td style="text-align: center"></td>
+									<td style="text-align: left; padding-left: 20px;">등록된 qna가 없습니다.</td>
+									<td style="text-align: center"></td>
+									<td style="text-align: center"></td>
+								</tr>
+							</c:if>
+							<c:if test="${qLV.qnaTotalCount>0 }">
+								<c:forEach var="qna" items="${qLV.qnaListPerPage }">
+									<tr>
+										<td style="text-align: center">${qna.id }</td>
+										<td style="text-align: center">${qna.productId }</td>
+										<td style="text-align: center">${qna.category }</td>
+										<td style="text-align: left; padding-left: 20px;"><a href="qnaPasswordCheck?id=${qna.id }">${qna.title }</a></td>
+										<td style="text-align: center"></td>
+										<td style="text-align: center">${qna.writeDate }</td>
+									</tr>
+								</c:forEach>
+							</c:if>
 						</tr>
 					</tbody>
 				</table>
+				<section>
+					<c:forEach var="pageNum" begin="1" end="${qLV.pageTotalCount }">
+						<c:if test="${qLV.currentPage==pageNum }">
+							<strong>[${pageNum }]</strong>
+						</c:if>
+						<c:if test="${qLV.currentPage!=pageNum }">
+							<a href="qna?pageNumber=${pageNum }">[${pageNum }]</a>
+						</c:if>
+					</c:forEach>
+				</section>
 				<a href="qnaWriteForm">글쓰기</a>
 			</div>
 			<script>

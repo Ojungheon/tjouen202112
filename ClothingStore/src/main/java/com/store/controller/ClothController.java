@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.store.qna.Qna;
+import com.store.qna.QnaListView;
 import com.store.service.QnaService;
 
 
@@ -26,22 +27,31 @@ public class ClothController {
 		logger.info("메인 페이지 진입");
 	}
 
-	//qna페이지
-	@RequestMapping(value = "/qna", method = RequestMethod.GET)
-	public void qnaPageGET() {
-		logger.info("qna 페이지 진입");
-	}
+//	//qna페이지
+//	@RequestMapping(value = "/qna", method = RequestMethod.GET)
+//	public void qnaPageGET() {
+//		logger.info("qna 페이지 진입");
+//	}
 
 	//qna게시글열람(비밀번호 입력)
 	@RequestMapping(value = "/qnaPasswordCheck", method = RequestMethod.GET)
-	public void qnaPasswordCheckGET() {
+	public void qnaPasswordCheckGET(int id, Model model) {
 		logger.info("qna 열람비밀번호 입력");
+		model.addAttribute("id", id);
 	}
 
 	//qna게시글열람(비밀번호 입력 후)
 	@RequestMapping(value = "/qnaOpen", method = RequestMethod.POST)
-	public void qnaOpen() {
+	public void qnaOpen(int id, String password, Model model) {
 		logger.info("qna 게시글열람");
+		Qna qnaCheck = qnaService.getQnaById(id);
+		String passwordCheck = qnaCheck.getPassword();
+//		model.addAttribute("result", qnaCheck);
+		if (!password.equals(passwordCheck)) {
+			model.addAttribute("result", null);
+		} else {
+			model.addAttribute("result", qnaCheck);
+		}
 	}
 
 	//qna 글쓰기
@@ -57,6 +67,23 @@ public class ClothController {
 		String result = qnaService.registerQna(qna);
 		model.addAttribute("result", result);
 	}
+	
+	//qna 리스트조회
+	@RequestMapping(value = "/qna", method = RequestMethod.GET)
+	public void listQna(String pageNumber, Model model) {
+		logger.info("qna 리스트조회 완료");
+		
+		int pN = 1;
+		if (pageNumber != null) {
+			pN = Integer.parseInt(pageNumber);
+		}
+		
+//		int pageNumber = 1;
+		QnaListView qnaListView = qnaService.viewQnaList(pN);
+		model.addAttribute("qLV", qnaListView);
+	}
+	
+	
 	//상품 구매페이지
 	@RequestMapping(value = "/productPurchase", method = RequestMethod.GET)
 	public void purchaseGET() {
