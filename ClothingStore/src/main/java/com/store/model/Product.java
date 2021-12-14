@@ -4,16 +4,27 @@ import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 public class Product {
+	/* 상품 id */
 	private int id;
+	/* 상품 이름 */
 	private String name;
+	/* 상품 분류 */
 	private String category;
+	/* 상품 브랜드 */
 	private String brand;
+	/* 상품 제작일 */
 	private LocalDate prodDate;
+	/* 상품 가격 */
 	private int price;
+	/* 상품 운송비 */
 	private int deliveryPrice;
+	/* 상품 할인률 */
 	private int discountRate;
+	/* 상품 소개 */
 	private String introduction;
+	/* 상품 등록 날짜 */
 	private LocalDateTime regDate;
+	/* 상품 수정 날짜 */
 	private LocalDateTime updateDate;
 	public Product(int id, String name, String category, String brand, LocalDate prodDate, int price, int deliveryPrice,
 			int discountRate, String introduction, LocalDateTime regDate, LocalDateTime updateDate) {
