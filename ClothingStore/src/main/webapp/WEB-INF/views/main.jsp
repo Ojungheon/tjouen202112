@@ -17,6 +17,7 @@
     ul.myMenu > li:hover ul.community_sub {display: block;}
     ul.myMenu > li ul.community_sub > li { display:inline-block; width:80px; padding:5px 10px; background:#eee; text-align:center; }
     ul.myMenu > li ul.community_sub > li:hover { background:#fff; }
+
 </style>
 <script type="text/javascript">
 	$(function () {
@@ -267,9 +268,43 @@
 			
 		</div>
 		<div class="foot_bar_area">
-			<h1>foot area</h1>
+			<div class="footer_nav">
+				<div class="footer_nav_container">
+					<ul>
+						<li>회사소개</li>
+	                    <span class="line">|</span>
+	                    <li>이용약관</li>
+	                    <span class="line">|</span>
+	                    <li>고객센터</li>
+	                    <span class="line">|</span>
+	                    <li>광고문의</li>
+	                    <span class="line">|</span>
+	                    <li>채용정보</li>
+	                    <span class="line">|</span>
+					</ul>
+				</div>
+			</div>
+			
+			<div class="footer">
+				<div class="footer_container">
+					<div class="footer_left">
+						<img src="resources/img/SOJ.png">
+					</div>
+					<div class="footer_right">
+						(주) SOJ     대표이사 : OOO
+						<br>
+						사업자등록번호: ooo-oo-ooooo
+						<br>
+						대표전화 : oooo-oooo(발신자 부담전화)
+						<br>
+						<br>
+						COPYRIGHT(C) <strong>kimvampa.tistory.com</strong>    ALL RIGHTS RESERVED.
+ 					</div>
+ 				</div>	
+ 					<div class="clearfix"></div>
+			</div>
 		</div>
-	</div>
+	</div> <!-- class="wrap" -->
 </div>
 </body>
 </html>
