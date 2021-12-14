@@ -27,12 +27,6 @@ public class ClothController {
 		logger.info("메인 페이지 진입");
 	}
 
-//	//qna페이지
-//	@RequestMapping(value = "/qna", method = RequestMethod.GET)
-//	public void qnaPageGET() {
-//		logger.info("qna 페이지 진입");
-//	}
-
 	//qna게시글열람(비밀번호 입력)
 	@RequestMapping(value = "/qnaPasswordCheck", method = RequestMethod.GET)
 	public void qnaPasswordCheckGET(int id, Model model) {
@@ -46,7 +40,6 @@ public class ClothController {
 		logger.info("qna 게시글열람");
 		Qna qnaCheck = qnaService.getQnaById(id);
 		String passwordCheck = qnaCheck.getPassword();
-//		model.addAttribute("result", qnaCheck);
 		if (!password.equals(passwordCheck)) {
 			model.addAttribute("result", null);
 		} else {
@@ -77,8 +70,6 @@ public class ClothController {
 		if (pageNumber != null) {
 			pN = Integer.parseInt(pageNumber);
 		}
-		
-//		int pageNumber = 1;
 		QnaListView qnaListView = qnaService.viewQnaList(pN);
 		model.addAttribute("qLV", qnaListView);
 	}
