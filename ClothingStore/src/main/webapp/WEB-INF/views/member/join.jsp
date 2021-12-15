@@ -5,7 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <title>회원가입</title>
-<link rel="stylesheet" href="${path}/resources/css/member/join.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/member/join.css">
 <script src="https://code.jquery.com/jquery-3.4.1.js"
 	integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
 	crossorigin="anonymous"></script>
@@ -116,6 +116,8 @@
 		$(document).ready(function() {
 			//회원가입 버튼(회원가입 기능 작동)
 			$(".join_button").click(function() {
+				$("#join_form").attr("action", "/store/member/join");
+		        $("#join_form").submit();
 				
 				/* 입력값 변수 */
 		        var id = $('.id_input').val(); // id 입력란
@@ -168,6 +170,15 @@
 		        }else{
 		            $('.final_mail_ck').css('display', 'none');
 		            mailCheck = true;
+		        }
+		        
+		        /* 주소 유효성 검사 */
+		        if(addr == ""){
+		            $('.final_addr_ck').css('display','block');
+		            addressCheck = false;
+		        }else{
+		            $('.final_addr_ck').css('display', 'none');
+		            addressCheck = true;
 		        }
 		        
 		        /* 최종 유효성 검사 */
