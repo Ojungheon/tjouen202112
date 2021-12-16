@@ -6,12 +6,15 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <link rel="stylesheet" href="../resources/css/admin/goodsEnroll.css">
- 
+<link rel="stylesheet" href="//code.jquery.com/ui/1.8.18/themes/base/jquery-ui.css" />
 <script
   src="https://code.jquery.com/jquery-3.4.1.js"
   integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
   crossorigin="anonymous">
 </script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script src="//code.jquery.com/ui/1.8.18/jquery-ui.min.js"></script>
+
 </head>
 </head>
 <body>
@@ -80,7 +83,7 @@
 		                    				<label>상품 생산일</label>
 		                    			</div>
 		                    			<div class="form_section_content">
-		                    				<input name="prodDate">
+		                    				<input name="prodDate" autocomplete="off" readonly="readonly">
 		                    			</div>
 		                    		</div>             
 		                    		<div class="form_section">
@@ -147,6 +150,31 @@ $("#enrollBtn").on("click",function(e){
 	enrollForm.submit();
 	
 });
+
+/* 캘린더 위젯 적용 */
+ 
+ /* 설정 */
+ const config = {
+		dateFormat: 'yy-mm-dd',
+		showOn : "button",
+		buttonText:"날짜 선택",
+		prevText: '이전 달',
+	    nextText: '다음 달',
+	    monthNames: ['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월'],
+	    monthNamesShort: ['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월'],
+	    dayNames: ['일','월','화','수','목','금','토'],
+	    dayNamesShort: ['일','월','화','수','목','금','토'],
+	    dayNamesMin: ['일','월','화','수','목','금','토'],
+	    yearSuffix: '년',
+	    changeMonth: true,
+	    changeYear: true
+}
+ 
+ /* 캘린더 */
+ $(function(){
+	 $("input[name='prodDate']").datepicker(config);
+ });
+
 
 </script> 	        
       
