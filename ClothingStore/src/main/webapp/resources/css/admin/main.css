@@ -44,6 +44,7 @@ ul{
     height:110px;
     line-height: 110px;
     background-color: #5080bd;
+    margin-bottom: 15px;
 }
 .admin_top_wrap>span{
     margin-left: 30px;
@@ -80,6 +81,12 @@ ul{
     font-size: 30px;
     font-weight: bolder;
 }
+/* <a>태그 색이 변경되지 않도록 하기 위해 */
+.admin_navi_wrap li a:link {color: black;}
+.admin_navi_wrap li a:visited {color: black;}
+.admin_navi_wrap li a:active {color: black;}
+.admin_navi_wrap li a:hover {color: black;}
+
 /* 
 .admin_list_01{
     background-color: #c8c8c8;

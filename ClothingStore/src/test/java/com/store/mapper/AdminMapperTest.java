@@ -30,13 +30,12 @@ public class AdminMapperTest {
 		product.setName("상의1");
 		product.setCategory("아우터");
 		product.setBrand("우일신");
-		product.setProdDate(LocalDate.now());
+		product.setProdDate("2021-03-18");
 		product.setPrice(50000);
 		product.setDeliveryPrice(2500);
 		product.setDiscountRate(10);
 		product.setIntroduction("우일신 아우터 상의1");
-		product.setRegDate(LocalDateTime.now());
-		product.setUpdateDate(LocalDateTime.now());
+		
 		
 		adminMapper.productEnroll(product);
 		

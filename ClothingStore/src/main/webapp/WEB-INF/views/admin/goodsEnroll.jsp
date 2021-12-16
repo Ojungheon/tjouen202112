@@ -40,11 +40,11 @@
                           <a class="admin_list_01" href="/admin/goodsEnroll">상품 등록</a>
                       </li>
                       <li>
-                          <a class="admin_list_02" href="/admin/goodsManage">상품 목록</a>
+                          <a class="admin_list_02" href="/admin/goodsManage">상품 관리</a>
                       </li>
-                      <lI>
+                      <li>
                           <a class="admin_list_05">회원 관리</a>                            
-                      </lI>                                                                                             
+                      </li>                                                                                             
                   </ul>
                 </div>
                 	<div class="admin_content_wrap">
@@ -115,22 +115,7 @@
 		                    				<input name="introduction">
 		                    			</div>
 		                    		</div>          		
-		                    		<div class="form_section">
-		                    			<div class="form_section_title">
-		                    				<label>등록 날짜</label>
-		                    			</div>
-		                    			<div class="form_section_content">
-		                    				<input name="regDate">
-		                    			</div>
-		                    		</div>        		
-		                    		<div class="form_section">
-		                    			<div class="form_section_title">
-		                    				<label>수정 날짜</label>
-		                    			</div>
-		                    			<div class="form_section_content">
-		                    				<input name="updateDate">
-		                    			</div>
-		                    		</div>
+		                    	
 		                   		</form>
 		                   			<div class="btn_section">
 		                   				<button id="cancelBtn" class="btn">취 소</button>

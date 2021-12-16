@@ -1,7 +1,8 @@
 package com.store.model;
 
-import java.time.LocalDate;
+
 import java.time.LocalDateTime;
+import java.util.Date;
 
 public class Product {
 	/* 상품 id */
@@ -13,7 +14,7 @@ public class Product {
 	/* 상품 브랜드 */
 	private String brand;
 	/* 상품 제작일 */
-	private LocalDate prodDate;
+	private String prodDate;
 	/* 상품 가격 */
 	private int price;
 	/* 상품 운송비 */
@@ -23,11 +24,14 @@ public class Product {
 	/* 상품 소개 */
 	private String introduction;
 	/* 상품 등록 날짜 */
-	private LocalDateTime regDate;
+	private Date regDate;
 	/* 상품 수정 날짜 */
-	private LocalDateTime updateDate;
-	public Product(int id, String name, String category, String brand, LocalDate prodDate, int price, int deliveryPrice,
-			int discountRate, String introduction, LocalDateTime regDate, LocalDateTime updateDate) {
+	private Date updateDate;
+	public Product() {
+		super();
+	}
+	public Product(int id, String name, String category, String brand, String prodDate, int price, int deliveryPrice,
+			int discountRate, String introduction, Date regDate, Date updateDate) {
 		super();
 		this.id = id;
 		this.name = name;
@@ -40,9 +44,6 @@ public class Product {
 		this.introduction = introduction;
 		this.regDate = regDate;
 		this.updateDate = updateDate;
-	}
-	public Product() {
-		super();
 	}
 	public int getId() {
 		return id;
@@ -68,10 +69,10 @@ public class Product {
 	public void setBrand(String brand) {
 		this.brand = brand;
 	}
-	public LocalDate getProdDate() {
+	public String getProdDate() {
 		return prodDate;
 	}
-	public void setProdDate(LocalDate prodDate) {
+	public void setProdDate(String prodDate) {
 		this.prodDate = prodDate;
 	}
 	public int getPrice() {
@@ -98,16 +99,16 @@ public class Product {
 	public void setIntroduction(String introduction) {
 		this.introduction = introduction;
 	}
-	public LocalDateTime getRegDate() {
+	public Date getRegDate() {
 		return regDate;
 	}
-	public void setRegDate(LocalDateTime regDate) {
+	public void setRegDate(Date regDate) {
 		this.regDate = regDate;
 	}
-	public LocalDateTime getUpdateDate() {
+	public Date getUpdateDate() {
 		return updateDate;
 	}
-	public void setUpdateDate(LocalDateTime updateDate) {
+	public void setUpdateDate(Date updateDate) {
 		this.updateDate = updateDate;
 	}
 	@Override
@@ -116,5 +117,7 @@ public class Product {
 				+ prodDate + ", price=" + price + ", deliveryPrice=" + deliveryPrice + ", discountRate=" + discountRate
 				+ ", introduction=" + introduction + ", regDate=" + regDate + ", updateDate=" + updateDate + "]";
 	}
+	
+	
 	
 }
