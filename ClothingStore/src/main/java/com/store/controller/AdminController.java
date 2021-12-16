@@ -28,22 +28,29 @@ public class AdminController {
 		logger.info("관리자 페이지 이동");
 	}
 	
-	/* 상품 등록 페이지 접속 */
+	/* 상품 관리 페이지 접속 */
 	@RequestMapping(value = "goodsManage", method = RequestMethod.GET)
 	public void goodsManageGET() throws Exception{
-		logger.info("상품 등록 페이지 접속");
+		logger.info("상품 관리 페이지 접속");
 	}
 	
+	/* 상품 등록 페이지 접속 */
+	@RequestMapping(value = "goodsEnroll", method = RequestMethod.GET)
+	public void goodsEnrollGET() throws Exception{
+		logger.info("상품 등록 페이지 접속");
+	}
 	/* 상품 등록 */
 	@PostMapping("/goodsEnroll")
-	public String goodsEnrollPOST(Product product, RedirectAttributes rttr) {
+	public String goodsEnrollPOST(Product product, RedirectAttributes rttr) throws Exception{
 		
-		logger.info("goodsEnrollPOST......" + product);
+		logger.info("productEnroll :" + product);
 		
-		adminService.productEnroll(product);
+		adminService.productEnroll(product); //상품 등록 쿼리 수행
 		
-		rttr.addFlashAttribute("enroll_result", product.getName());
+		rttr.addFlashAttribute("enroll_result", product.getName()); //등록 성공 메시지
 		
 		return "redirect:/admin/goodsManage";
 	}
+	
+
 }

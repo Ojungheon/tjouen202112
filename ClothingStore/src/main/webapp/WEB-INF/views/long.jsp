@@ -1,12 +1,12 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+	pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Welcom SOJ</title>
+<title>긴팔티</title>
 <link rel="stylesheet" href="resources/css/main.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <style>
  ul, ol, li { list-style:none; margin:0; padding:0; }
    
@@ -17,45 +17,16 @@
     ul.myMenu > li:hover ul.community_sub {display: block;}
     ul.myMenu > li ul.community_sub > li { display:inline-block; width:80px; padding:5px 10px; background:#eee; text-align:center; }
     ul.myMenu > li ul.community_sub > li:hover { background:#fff; }
-
+.sorting_method_area{
+	height: 50px;
+}
+.sorting_area{float: right}  
+select {
+	font-size: 1.0rem;
+}  
 </style>
-<script type="text/javascript">
-	$(function () {
-		var cnt = 0;
-		interv = setInterval(() => {
-			$(".mySlides>ul").animate(
-					{"margin-left":"-1080px"},500,
-					function(){
-						$(".mySlides>ul").css("margin-left","0px");
-						$(".mySlides>ul").append($(this).children().eq(0))
-					})
-        }, 10000);
-		$(".mySlides>a").last().click(function(){
-			$(".mySlides>ul").animate(
-				{"margin-left":"-1080px"},500,
-				function(){
-					$(".mySlides>ul").css("margin-left","0px");
-					$(".mySlides>ul").append($(this).children().eq(0))
-				})
-		})
-		$(".mySlides>a").first().click(function(){
-			$(".mySlides>ul").animate(
-                    {"width":"calc(1080px*5)", "margin-left":"-1080px"},
-                    0,
-                    function () {
-                        $(".mySlides>ul").prepend($(this).children().eq(3));
-                    }
-                )
-                $(".mySlides>ul").animate(
-                    {"margin-left":"0px", "width":"calc(1080px*4)"},
-                    500,
-                )
-		})
-	})
-</script>
 </head>
 <body>
-
 <div class="wrapper">
 	<div class="wrap">
 		<div class="gnb_area" id="container">
@@ -114,7 +85,7 @@
 					<li><a href="#">1+1 SET</a></li>
 					<li><a href="#">상의</a>
 						<ul>
-							<li><a href="long">긴팔티</a></li>
+							<li><a href="#1">긴팔티</a></li>
 							<li><a href="#1">맨투맨/후드</a></li>
 							<li><a href="#1">니트</a></li>
 							<li><a href="#1">나시</a></li>
@@ -154,68 +125,46 @@
 			</div>
 		</div>
 		<div class="content_area">
-			<fieldset>
-				<div class="mySlides">
-					<ul>
-					    <li><img class="banner" src="https://image.brandi.me/home/banner/bannerImage_0_1638149169.jpeg"></li>
-					
-		
-						<li><img class="banner" src="https://image.brandi.me/home/banner/bannerImage_0_1637913097.jpg"></li>
-			
-			
-						<li><img class="banner" src="https://image.brandi.me/home/banner/bannerImage_0_1637732092.jpg"></li>
-				
-			
-						<li><img class="banner" src="https://image.brandi.me/home/banner/bannerImage_0_1638258239.jpeg"></li>
-					</ul>
-					
-					<a><img src="resources/img/prev_btn.png"></a>
-					<a><img src="resources/img/next_btn.png"></a>
-					
-				</div>
-			</fieldset>
+			<h3>긴팔티</h3>
+			<br>
 			<hr>
-			<div class="best">
-				<div class="title_area">
-					<h3>BEST ITEM</h3><br>
-					<p>이 달의 베스트 아이템을 확인해보세요.</p>
-					<hr>
+			<div class="sorting_method_area">
+				<div class="count_area"> total ?? items</div>
+				<div class="sorting_area">
+					<select name="method" id="sortingMethod">
+						<option value="" selected="selected">정렬방식</option>
+						<option value="option1">인기순</option>
+						<option value="option2">높은가격순</option>
+						<option value="option3">낮은가격순</option>
+						<option value="option4">최신순</option>
+					</select>
 				</div>
-				<div class="best_item_area">
-					<ul class="lst_type">
+			</div>
+			<hr>
+			<div class="item_area">
+				<ul class="lst_type">
 						<li>
 							<a href="/productPurchase">
-								<span class="thumb"><img src="https://jb-shop.kr/web/product/big/202102/2b7da28f914d2c399804a445f4827d57.webp" width="300px" height="375px" alt=""></span>
-								<em>
-									브루클린 리그 후드티<br>
-									주문 폭주!!*기모선택 가능<br>
-									29,800원<br>
-								</em>
+								<span class="thumb"><img src="https://jb-shop.kr/web/product/big/202101/77ee04362e57ae9ef8930cfa1696a4ee.webp" width="300px" height="375px" alt=""></span>
+								<em>1997 양기모 후드 가격: 42000원</em>
 							</a>
 						</li>
 						<li>
 							<a href="#">
 								<span class="thumb"><img src="https://jb-shop.kr/web/product/big/202101/77ee04362e57ae9ef8930cfa1696a4ee.webp" width="300px" height="375px" alt=""></span>
-								<em>브루클린 리그 후드티<br>
-									주문 폭주!!*기모선택 가능<br>
-									29,800원<br></em>
+								<em>1997 양기모 후드 가격: 42000원</em>
 							</a>
 						</li>
 						<li>
 							<a href="#">
 								<span class="thumb"><img src="https://jb-shop.kr/web/product/big/202101/77ee04362e57ae9ef8930cfa1696a4ee.webp" width="300px" height="375px" alt=""></span>
-								<em>브루클린 리그 후드티<br>
-									주문 폭주!!*기모선택 가능<br>
-									29,800원<br>
-								</em>
+								<em>1997 양기모 후드 가격: 42000원</em>
 							</a>
 						</li>
 						<li>
 							<a href="#">
 								<span class="thumb"><img src="https://jb-shop.kr/web/product/big/202101/77ee04362e57ae9ef8930cfa1696a4ee.webp" width="300px" height="375px" alt=""></span>
-								<em>브루클린 리그 후드티<br>
-									주문 폭주!!*기모선택 가능<br>
-									29,800원<br></em>
+								<em>1997 양기모 후드 가격: 42000원</em>
 							</a>
 						</li>
 						<li>
@@ -271,51 +220,49 @@
 							</a>
 						</li>
 					</ul>
-				</div>
-			</div>	
+			</div>
+		</div>
+			<div class="foot_bar_area">
 				
-			<div class="new"></div>
-			<div class="sale"></div>
-			
-		</div>
-		<div class="foot_bar_area">
-			<div class="footer_nav">
-				<div class="footer_nav_container">
-					<ul>
-						<li>회사소개</li>
-	                    <span class="line">|</span>
-	                    <li>이용약관</li>
-	                    <span class="line">|</span>
-	                    <li>고객센터</li>
-	                    <span class="line">|</span>
-	                    <li>광고문의</li>
-	                    <span class="line">|</span>
-	                    <li>채용정보</li>
-	                    <span class="line">|</span>
-					</ul>
+				<div class="footer_nav">
+					<div class="footer_nav_container">
+						<ul>
+							<li>회사소개</li>
+		                    <span class="line">|</span>
+		                    <li>이용약관</li>
+		                    <span class="line">|</span>
+		                    <li>고객센터</li>
+		                    <span class="line">|</span>
+		                    <li>광고문의</li>
+		                    <span class="line">|</span>
+		                    <li>채용정보</li>
+		                    <span class="line">|</span>
+						</ul>
+					</div>
+				</div>
+				
+				<div class="footer">
+					<div class="footer_container">
+						<div class="footer_left">
+							<img src="resources/img/SOJ.png">
+						</div>
+						<div class="footer_right">
+							(주) SOJ     대표이사 : OOO
+							<br>
+							사업자등록번호: ooo-oo-ooooo
+							<br>
+							대표전화 : oooo-oooo(발신자 부담전화)
+							<br>
+							<br>
+							COPYRIGHT(C) <strong>kimvampa.tistory.com</strong>    ALL RIGHTS RESERVED.
+	 					</div>
+	 				</div>	
+	 					<div class="clearfix"></div>
+				
 				</div>
 			</div>
-			
-			<div class="footer">
-				<div class="footer_container">
-					<div class="footer_left">
-						<img src="resources/img/SOJ.png">
-					</div>
-					<div class="footer_right">
-						(주) SOJ     대표이사 : OOO
-						<br>
-						사업자등록번호: ooo-oo-ooooo
-						<br>
-						대표전화 : oooo-oooo(발신자 부담전화)
-						<br>
-						<br>
-						COPYRIGHT(C) <strong>kimvampa.tistory.com</strong>    ALL RIGHTS RESERVED.
- 					</div>
- 				</div>	
- 					<div class="clearfix"></div>
-			</div>
-		</div>
-	</div> <!-- class="wrap" -->
+	</div>
 </div>
+	
 </body>
 </html>

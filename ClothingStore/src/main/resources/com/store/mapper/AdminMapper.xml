@@ -5,8 +5,8 @@
  <mapper namespace="com.store.mapper.AdminMapper">
  <!-- 상품 등록 -->
  <insert id="productEnroll">
- 	insert into product(id, name, category, brand, prod_date, price, delivery_price, discount_rate, introduction, reg_date, update_date)
- 	values (#{id},#{name},#{category},#{brand},#{prodDate},#{price},#{deliveryPrice},#{discountRate},#{introduction},#{regDate},#{updateDate})
+ 	insert into product(id, name, category, brand, prod_date, price, delivery_price, discount_rate, introduction)
+ 	values (#{id},#{name},#{category},#{brand},#{prodDate},#{price},#{deliveryPrice},#{discountRate},#{introduction})
  </insert>
  
  </mapper>

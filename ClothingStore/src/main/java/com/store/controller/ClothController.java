@@ -94,4 +94,9 @@ public class ClothController {
 	public void searchResultGET() {
 		logger.info("searchResult 페이지 진입");
 	}
+	//긴팔티 페이지
+	@RequestMapping(value = "long", method = RequestMethod.GET)
+	public void longSleeveGET() {
+		logger.info("긴팔티 페이지 진입");
+	}
 }
