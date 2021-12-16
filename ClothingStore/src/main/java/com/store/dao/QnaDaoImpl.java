@@ -42,5 +42,15 @@ public class QnaDaoImpl implements QnaDao{
 	public List<Qna> selectQnaPerPageWC(int firstRow, int qnaCountPerPage, String category) {
 		return qnaMapper.selectQnaPerPageWC(firstRow, qnaCountPerPage, category);
 	}
+	//qna 글수정
+	@Override
+	public int updateQna(Qna qna) {
+		return qnaMapper.updateQna(qna);
+	}
+	//qna 글삭제
+	@Override
+	public int deleteQna(int id) {
+		return qnaMapper.deleteQna(id);
+	}
 	
 }

@@ -36,4 +36,13 @@ id, member_id, product_id, option_id, category, title, message, write_date, pass
 		select id, member_id, product_id, option_id, category, title, message, write_date, password 
 		from qna where category=#{category} order by id desc limit #{firstRow}, #{qnaCountPerPage}
 	</select>
+<!-- qna 글수정 관련 -->
+	<update id="updateQna" parameterType="Qna">
+		update qna set member_id=#{memberId}, product_id=#{productId}, option_id=#{optionId}, category=#{category}, title=#{title}, message=#{message}, write_date=#{writeDate}, password=#{password} 
+		where id=#{id}
+	</update>
+<!-- qna 글삭제 관련 -->
+	<delete id="deleteQna">
+		delete from qna where id=#{id}
+	</delete>
 </mapper>

@@ -1,11 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
-<title>질문답변게시판</title>
+<title>질문답변삭제</title>
 <link rel="stylesheet" href="resources/css/main.css">
 <style>
 * {
@@ -17,13 +16,16 @@
 /* .qnaArea{
 	height: 700px;
 } */
-.qnaOpen{
+table{
 	border: 1px solid black;
 	width: 100%;
 	border-collapse: collapse;
 }
 table>tbody>tr>td{
 	border: 1px solid black;
+}
+#title{
+	width: 850px;
 }
  ul, ol, li { list-style:none; margin:0; padding:0; }
    
@@ -139,34 +141,41 @@ table>tbody>tr>td{
 				<h4>Q&A 게시판</h4>
 				<hr>
 				<div class="qnaList">
-					<c:if test="${result == null }">
-						비밀번호가 일치하지 않습니다.<br>
-					</c:if>
-					<c:if test="${result != null }">
-						<table class="qnaOpen">
+					<form action="qnaRemove" name="removeQna" method="post">
+						<input type="hidden" id="id" name="id" value="${qRemove.id }">
+						<input type="hidden" id="memberId" name="memberId" value="${qRemove.memberId }">
+						<table>
 							<tbody>
 								<tr>
-									<td style="height:20px; width:90px;">제목</td>
-									<td>${result.title }</td>
+								<!-- 상품문의, 주문/배송문의, 교환/반품문의, 입금/결제문의, 기타문의 -->
+									<td>카테고리</td>
+									<td>
+										<input type="text" name="category" id="category" readonly="readonly" value="${qRemove.category }">
+									</td>
 								</tr>
 								<tr>
-									<td style="height:20px; width:90px;">번호</td>
-									<td>${result.id }</td>
+									<td>제목</td>
+									<td><input type="text" name="title" id="title" readonly="readonly" value="${qRemove.title }"></td>
 								</tr>
 								<tr>
-									<td style="height:20px; width:90px;">작성자</td>
+									<td>작성자</td>
+									<td><input type="text" name="name" id="name" readonly="readonly" value="지나가는사람"></td>
+								</tr>
+								<tr>
+									<td>상품정보</td>
 									<td></td>
 								</tr>
 								<tr>
-									<td style="height:300px; width:90px;">내용</td>
-									<td>
-										${result.message }<br>
-									</td>
+									<td>내용</td>
+									<td><textarea rows="30" cols="120" name="message" readonly="readonly" id="message">${qRemove.message }</textarea></td>
 								</tr>
 							</tbody>
 						</table>
-						<a href="qnaEditForm?id=${result.id }">수정</a>    <a href="qnaRemoveForm?id=${result.id }">삭제</a>    <a href="qna">목록보기</a>
-					</c:if>
+						※삭제시 복구할 수 없습니다. 그래도 삭제하려면 글작성시 입력한 비밀번호를 입력하세요.
+						<input type="password" name="password" id="password">
+						<input type="hidden" id="writeDate" name="writeDate" value="${qRemove.writeDate }">
+						<input type="submit" value="글삭제">
+					</form>
 				</div>
 			</div>
 		</div>
@@ -175,6 +184,31 @@ table>tbody>tr>td{
 		</div>
 	</div>
 </div>
-	
+<script>
+	let writeQna = document.writeQna;
+	writeQna.onsubmit = function(){
+		let getTitle = document.getElementById("title");
+		let titleValue = getTitle.value.trim();
+		if(titleValue == ""){
+			alert("제목을 입력하세요.");
+			getTitle.focus();
+			return false;
+		}
+		let getMessage = document.getElementById("message");
+		let messageValue = getMessage.value.trim();
+		if(messageValue == ""){
+			alert("내용을 입력하세요.");
+			getMessage.focus();
+			return false;
+		}
+		let getPassword = document.getElementById("password");
+		let passwordValue = getPassword.value.trim();
+		if(passwordValue == ""){
+			alert("비밀번호를 입력하세요.");
+			getPassword.focus();
+			return false;
+		}
+	}
+</script>
 </body>
 </html>
