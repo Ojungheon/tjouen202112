@@ -8,15 +8,17 @@ public class QnaListView {
 	private int currentPage;//현재 페이지 번호
 	private int pageTotalCount;//전체 페이지 수
 	private int firstRow;//가장 위 qna 번호
+	private String category;//현 카테고리
 	private List<Qna> qnaListPerPage;//한 페이지에 보여줄 qna 리스트
 	public QnaListView() {}
-	public QnaListView(int qnaTotalCount, int qnaCountPerPage, int currentPage, int firstRow,
+	public QnaListView(int qnaTotalCount, int qnaCountPerPage, int currentPage, int firstRow, String category,
 			List<Qna> qnaListPerPage) {
 		super();
 		this.qnaTotalCount = qnaTotalCount;
 		this.qnaCountPerPage = qnaCountPerPage;
 		this.currentPage = currentPage;
 		this.firstRow = firstRow;
+		this.category = category;
 		this.qnaListPerPage = qnaListPerPage;
 		//pageTotalCount
 		if (qnaCountPerPage == 0) {
@@ -39,6 +41,9 @@ public class QnaListView {
 	}
 	public int getFirstRow() {
 		return firstRow;
+	}
+	public String getCategory() {
+		return category;
 	}
 	public List<Qna> getQnaListPerPage() {
 		return qnaListPerPage;

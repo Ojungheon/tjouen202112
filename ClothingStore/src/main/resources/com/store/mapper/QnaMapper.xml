@@ -12,12 +12,12 @@ id, member_id, product_id, option_id, category, title, message, write_date, pass
 		values(#{id}, #{memberId}, #{productId}, #{optionId}, #{category}, #{title}, #{message}, #{writeDate}, #{password})
 	</insert>
 <!-- Qna 게시판 조회 관련 -->
-<!-- 전체 Qna 개수 조회 -->
+<!-- Qna 개수 조회(모든 카테고리) -->
 	<select id="selectCountQna" resultType="int">
 		select count(id) from qna;
 	</select>
 	
-<!-- 한 페이지에 보여줄 Qna 리스트 조회 -->
+<!-- 한 페이지에 보여줄 Qna 리스트 조회(모든 카테고리) -->
 	<select id="selectQnaPerPage" resultType="Qna">
 		select id, member_id, product_id, option_id, category, title, message, write_date, password 
 		from qna order by id desc limit #{firstRow}, #{qnaCountPerPage}
@@ -26,5 +26,14 @@ id, member_id, product_id, option_id, category, title, message, write_date, pass
 	<select id="selectOneById" resultType="Qna">
 		select id, member_id, product_id, option_id, category, title, message, write_date, password 
 		from qna where id=#{id}
+	</select>
+<!-- Qna 개수 조회(카테고리별) -->
+	<select id="selectCountQnaWC" resultType="int">
+		select count(id) from qna where category=#{category}
+	</select>
+<!-- 한 페이지에 보여줄 Qna 리스트 조회(카테고리별) -->
+	<select id="selectQnaPerPageWC" resultType="Qna">
+		select id, member_id, product_id, option_id, category, title, message, write_date, password 
+		from qna where category=#{category} order by id desc limit #{firstRow}, #{qnaCountPerPage}
 	</select>
 </mapper>

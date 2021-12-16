@@ -17,7 +17,7 @@ import com.store.service.QnaService;
 public class ClothController {
 
 	private static final Logger logger = LoggerFactory.getLogger(ClothController.class);
-	
+
 	@Autowired
 	QnaService qnaService;
 
@@ -60,21 +60,25 @@ public class ClothController {
 		String result = qnaService.registerQna(qna);
 		model.addAttribute("result", result);
 	}
-	
+
 	//qna 리스트조회
 	@RequestMapping(value = "/qna", method = RequestMethod.GET)
-	public void listQna(String pageNumber, Model model) {
+	public void listQna(String pageNumber, String category, Model model) {
 		logger.info("qna 리스트조회 완료");
-		
+
 		int pN = 1;
 		if (pageNumber != null) {
 			pN = Integer.parseInt(pageNumber);
 		}
-		QnaListView qnaListView = qnaService.viewQnaList(pN);
+		String cg = "전체";
+		if (category != null) {
+			cg = category;
+		}
+		QnaListView qnaListView = qnaService.viewQnaList(pN, cg);
 		model.addAttribute("qLV", qnaListView);
 	}
-	
-	
+
+
 	//상품 구매페이지
 	@RequestMapping(value = "/productPurchase", method = RequestMethod.GET)
 	public void purchaseGET() {

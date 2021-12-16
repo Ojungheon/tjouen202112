@@ -32,22 +32,35 @@ public class QnaService {
 	}
 	
 	//글 리스트 화면에 뿌리기
-	public QnaListView viewQnaList(int pageNumber) {
+	public QnaListView viewQnaList(int pageNumber, String category) {
 		//한 페이지에 보여줄 qna 개수
 		int qnaCountPerPage = 10;
 		QnaListView qnaListView = null;
 		
-		//전체 qna 개수
-		int qnaTotalCount = qnaDao.selectCountQna();
-		int firstRow = 0;
-		if (qnaTotalCount > 0) {
-			firstRow = (pageNumber-1) * qnaCountPerPage;
+		if (category.equals("전체")) {
+			//전체 qna 개수
+			int qnaTotalCount = qnaDao.selectCountQna();
+			int firstRow = 0;
+			if (qnaTotalCount > 0) {
+				firstRow = (pageNumber-1) * qnaCountPerPage;
+			}
+			
+			List<Qna> qnaListPerPage = qnaDao.selectQnaPerPage(firstRow, qnaCountPerPage);
+			
+			qnaListView = new QnaListView(qnaTotalCount, qnaCountPerPage, pageNumber, 
+					firstRow, category, qnaListPerPage);
+		} else {
+			//해당 카테고리 qna 개수
+			int qnaTotalCountWC = qnaDao.selectCountQnaWC(category);
+			int firstRow = 0;
+			if (qnaTotalCountWC > 0) {
+				firstRow = (pageNumber-1) * qnaCountPerPage;
+			}
+			List<Qna> qnaListPerPageWC = qnaDao.selectQnaPerPageWC(firstRow, qnaCountPerPage, category);
+			
+			qnaListView = new QnaListView(qnaTotalCountWC, qnaCountPerPage, pageNumber, firstRow, category, qnaListPerPageWC);
 		}
 		
-		List<Qna> qnaListPerPage = qnaDao.selectQnaPerPage(firstRow, qnaCountPerPage);
-		
-		qnaListView = new QnaListView(qnaTotalCount, qnaCountPerPage, pageNumber, 
-				firstRow, qnaListPerPage);
 		
 		return qnaListView;
 	}

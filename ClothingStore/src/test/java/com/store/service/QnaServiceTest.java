@@ -21,13 +21,34 @@ public class QnaServiceTest {
 	@Test
 //	@Ignore
 	public void registerTest() {
-		
-		for (int i = 1; i <= 500; i++) {
+		//카테고리 무작위로 글을 등록하기
+		for (int i = 1; i <= 10000; i++) {
 			Qna qna = new Qna();
 			qna.setMemberId("test"+i);
 			qna.setProductId(i);
 			qna.setOptionId(i);
-			qna.setCategory("category"+i);
+			
+			switch ((int)(9999*Math.random()+1) % 5) {
+			case 0:
+				qna.setCategory("상품문의");
+				break;
+
+			case 1:
+				qna.setCategory("주문/배송문의");
+				break;
+
+			case 2:
+				qna.setCategory("교환/반품문의");
+				break;
+
+			case 3:
+				qna.setCategory("입금/결제문의");
+				break;
+
+			case 4:
+				qna.setCategory("기타문의");
+				break;
+			}
 			qna.setTitle("문의사항"+i);
 			qna.setMessage("문의내용"+i);
 			qna.setPassword("passwordUsage"+i);
@@ -43,7 +64,8 @@ public class QnaServiceTest {
 	@Ignore
 	public void select테스트() {
 		int pageNumber = 1;
-		QnaListView qnaListView = qnaService.viewQnaList(pageNumber);
+		String category = "전체";
+		QnaListView qnaListView = qnaService.viewQnaList(pageNumber, category);
 		
 		assertNotNull(qnaListView);
 		System.out.println(qnaListView.getCurrentPage());

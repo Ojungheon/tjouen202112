@@ -155,17 +155,18 @@ table {
 			<hr>
 			<div class="category">
 				<ul>
-					<li id="all" onclick="choose('all')" class="selected">전체</li>
-					<li id="product" onclick="choose('product')">상품문의</li>
-					<li id="purDeliv" onclick="choose('purDeliv')">주문/배송문의</li>
-					<li id="exchange" onclick="choose('exchange')">교환/반품문의</li>
-					<li id="pay" onclick="choose('pay')">입금/결제문의</li>
-					<li id="other" onclick="choose('other')">기타문의</li>
+					<li id="all"><a href="qna?pageNumber=1&category=전체">전체</a></li>
+					<li id="product"><a href="qna?pageNumber=1&category=상품문의">상품문의</a></li>
+					<li id="purDeliv"><a href="qna?pageNumber=1&category=주문/배송문의">주문/배송문의</a></li>
+					<li id="exchange"><a href="qna?pageNumber=1&category=교환/반품문의">교환/반품문의</a></li>
+					<li id="pay"><a href="qna?pageNumber=1&category=입금/결제문의">입금/결제문의</a></li>
+					<li id="other"><a href="qna?pageNumber=1&category=기타문의">기타문의</a></li>
 				</ul>
 			</div>
 			<br>
 			<hr>
 			<div class="qnaList">
+				<input type="text" hidden="true" id="category" name="category" value="${qLV.category }">
 				<table>
 					<thead>
 						<tr>
@@ -210,7 +211,7 @@ table {
 							<strong>[${pageNum }]</strong>
 						</c:if>
 						<c:if test="${qLV.currentPage!=pageNum }">
-							<a href="qna?pageNumber=${pageNum }">[${pageNum }]</a>
+							<a href="qna?pageNumber=${pageNum }&category=${qLV.category }">[${pageNum }]</a>
 						</c:if>
 					</c:forEach>
 				</section>
@@ -223,6 +224,26 @@ table {
 		        const exchange = document.getElementById("exchange");
 		        const pay = document.getElementById("pay");
 		        const other = document.getElementById("other");
+		        let category = document.getElementById("category").value;
+		        console.log(category);
+		        if (category == null || category == "전체") {
+					choose('all');
+				}
+		        if (category == "상품문의") {
+		        	choose('product');
+				}
+				if (category == "주문/배송문의") {
+					choose('purDeliv');
+				}
+				if (category == "교환/반품문의") {
+					choose('exchange');
+				}
+				if (category == "입금/결제문의") {
+					choose('pay');
+				}
+				if (category == "기타문의") {
+					choose('other');
+				}
 		        function removeCategoryClass() {
 		            all.classList.remove("selected");
 		            product.classList.remove("selected");
