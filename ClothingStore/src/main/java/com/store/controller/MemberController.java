@@ -140,7 +140,7 @@ public class MemberController {
 	            
 	            int result = 0;
 	            rttr.addFlashAttribute("result", result);
-	            return "redirect:/store/member/login";
+	            return "redirect:/member/login";
 	            
 	        }
 	        
