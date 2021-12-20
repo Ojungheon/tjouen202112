@@ -1,17 +1,19 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+    <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
 <title>Welcom SOJ</title>
-<link rel="stylesheet" href="resources/css/main.css">
+<link rel="stylesheet" href="resources/css/main.css?after">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <style>
  ul, ol, li { list-style:none; margin:0; padding:0; }
    
     ul.myMenu {}
-    ul.myMenu > li { display:inline-block; width:80px; padding:5px 10px; background:#eee; border:1px solid #eee;  text-align:center; position: relative;}
+    ul.myMenu > li { display:inline-block; width:120px; padding:5px 10px; background:#eee; border:1px solid #eee;  text-align:center; position: relative;}
     ul.myMenu > li:hover { background:#fff; }
     ul.myMenu > li ul.community_sub { display:none; position: absolute; top:30px; left:0; }
     ul.myMenu > li:hover ul.community_sub {display: block;}
@@ -60,12 +62,20 @@
 	<div class="wrap">
 		<div class="gnb_area" id="container">
 			<ul class="myMenu">
-			<ul class="myMenu">
-				<li class="menu1"><a href="member/login">로그인</a></li>
-				<li class="menu2"><a href="member/join">회원가입</a></li>
-				<li class="menu3">마이페이지</li>
-				<li class="menu3">장바구니</li>
-				<li class="menu4">
+				<c:if test="${member == null}">
+					<li class="menu1"><a href="member/login">로그인</a></li>
+					<li class="menu2"><a href="member/join">회원가입</a></li>
+				</c:if>
+				<c:if test="${member != null }">
+					
+					<li><a href="/member/logout.do">로그아웃</a></li>
+					<li class="menu3">장바구니</li>
+					<li class="menu4">마이페이지</li>
+					<c:if test="${member.adminCk == 1 }">
+						<li><a href="/admin/main">관리자 페이지</a></li>
+					</c:if>
+				</c:if>
+				<li class="menu5">
 					커뮤니티
 					<ul class="community_sub">
 						<li><a href="notice">공지사항&이벤트</a></li>
@@ -73,13 +83,31 @@
 						<li>Review</li>	
 					</ul>
 				</li>
-				<li class="menu5"><a href="qna">Q&A</a></li>
-				<li class="menu6">Review</li>
+				<li class="menu6"><a href="qna">Q&A</a></li>
+				<li class="menu7">Review</li>
 			</ul>
+			               
 		</div>
 		<div class="top_area">
 			<div class="logo_area">
 				<a href="/main"><img src="resources/img/SOJ Fashion.png" width="100%" height="100%"></a>
+			</div>
+			<div class="login_area">
+				<!-- 로그인 하지 않은 상태 -->
+				<c:if test = "${member == null }">
+					<div class="login_button"><a href="/member/login">로그인</a></div>
+					<span><a href="/member/join">회원가입</a></span>
+				</c:if>
+				
+				<!-- 로그인 한 상태 -->
+				<c:if test="${member != null }">
+					<div class="login_success_area">
+						<span>회원 : ${member.memberName}</span>
+						<span>충전금액 : <fmt:formatNumber value="${member.money }" pattern="\#,###.##"/></span>
+						<span>포인트 : <fmt:formatNumber value="${member.point }" pattern="#,###" /></span>
+						<a href="/member/logout.do">로그아웃</a>
+					</div>
+				</c:if>
 			</div>
 			<div class="search_area">
 				<table class="search_table">
@@ -91,6 +119,7 @@
 					</tbody>
 				</table>
 			</div>
+			
 			<div class="clearfix"></div>
 		</div>
 		<div class="navi_bar_area">
