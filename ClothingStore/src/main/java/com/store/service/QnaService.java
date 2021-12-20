@@ -68,5 +68,23 @@ public class QnaService {
 	public Qna getQnaById(int id) {
 		return qnaDao.selectOneById(id);
 	}
+
+	public String editQna(Qna qna) {
+		int cnt = qnaDao.updateQna(qna);
+		if (cnt == 1) {
+			return "글수정을 완료하였습니다.";
+		} else {
+			return "글수정을 완료하지 못하였습니다.";
+		}
+	}
+
+	public String removeQna(Qna qna) {
+		int cnt = qnaDao.deleteQna(qna.getId());
+		if (cnt == 1) {
+			return "글을 삭제하였습니다.";
+		} else {
+			return "글을 삭제하지 못하였습니다.";
+		}
+	}
 	
 }

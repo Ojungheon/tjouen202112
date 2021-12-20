@@ -1,11 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
-<title>질문답변게시판</title>
+<title>질문답변삭제</title>
 <link rel="stylesheet" href="resources/css/main.css">
 <style>
 * {
@@ -17,14 +16,6 @@
 /* .qnaArea{
 	height: 700px;
 } */
-.qnaOpen{
-	border: 1px solid black;
-	width: 100%;
-	border-collapse: collapse;
-}
-table>tbody>tr>td{
-	border: 1px solid black;
-}
  ul, ol, li { list-style:none; margin:0; padding:0; }
    
     ul.myMenu {}
@@ -135,40 +126,8 @@ table>tbody>tr>td{
 			</div>
 		</div>
 		<div class="content_area">
-			<div class="qnaArea">
-				<h4>Q&A 게시판</h4>
-				<hr>
-				<div class="qnaList">
-					<c:if test="${result == null }">
-						비밀번호가 일치하지 않습니다.<br>
-					</c:if>
-					<c:if test="${result != null }">
-						<table class="qnaOpen">
-							<tbody>
-								<tr>
-									<td style="height:20px; width:90px;">제목</td>
-									<td>${result.title }</td>
-								</tr>
-								<tr>
-									<td style="height:20px; width:90px;">번호</td>
-									<td>${result.id }</td>
-								</tr>
-								<tr>
-									<td style="height:20px; width:90px;">작성자</td>
-									<td></td>
-								</tr>
-								<tr>
-									<td style="height:300px; width:90px;">내용</td>
-									<td>
-										${result.message }<br>
-									</td>
-								</tr>
-							</tbody>
-						</table>
-						<a href="qnaEditForm?id=${result.id }">수정</a>    <a href="qnaRemoveForm?id=${result.id }">삭제</a>    <a href="qna">목록보기</a>
-					</c:if>
-				</div>
-			</div>
+			<h1>${result }</h1>
+			<a href="qna">목록보기</a>
 		</div>
 		<div class="foot_bar_area">
 			<h1>foot area</h1>

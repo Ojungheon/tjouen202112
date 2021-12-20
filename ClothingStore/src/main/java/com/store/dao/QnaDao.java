@@ -17,5 +17,9 @@ public interface QnaDao {
 	public int selectCountQnaWC(String category);
 	//qna 리스트 조회(카테고리별)
 	public List<Qna> selectQnaPerPageWC(int firstRow, int qnaCountPerPage, String category);
+	//qna 글수정
+	public int updateQna(Qna qna);
+	//qna 글삭제
+	public int deleteQna(int id);
 	
 }

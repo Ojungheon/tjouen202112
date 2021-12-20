@@ -258,9 +258,8 @@ table {
 		        }
 		    </script>
 		</div>
-			<div class="foot_bar_area">
-				<h1>foot area</h1>
-			</div>
+		<div class="foot_bar_area">
+			<h1>foot area</h1>
 		</div>
 	</div>
 

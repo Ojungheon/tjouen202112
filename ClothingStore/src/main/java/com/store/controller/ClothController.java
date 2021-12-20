@@ -77,6 +77,53 @@ public class ClothController {
 		QnaListView qnaListView = qnaService.viewQnaList(pN, cg);
 		model.addAttribute("qLV", qnaListView);
 	}
+	
+	//qna 글수정하기
+	@RequestMapping(value = "/qnaEditForm", method = RequestMethod.GET)
+	public void editQnaGET(int id, Model model) {
+		logger.info("qna 글수정 시작");
+		
+		Qna qna = qnaService.getQnaById(id);
+		model.addAttribute("qEdit", qna);
+	}
+	
+	//qna 글수정 반영하기
+	@RequestMapping(value = "/qnaEdit", method = RequestMethod.POST)
+	public void editQnaPOST(Qna qna, Model model) {
+		logger.info("qna 글수정 작업");
+		String result = null;
+		Qna qnaBefore = qnaService.getQnaById(qna.getId());
+		if (qna.getPassword().equals(qnaBefore.getPassword())) {
+			result = qnaService.editQna(qna);
+		} else {
+			result = "비밀번호가 일치하지 않아 글수정을 할 수 없습니다.";
+		}
+		model.addAttribute("result", result);
+	}
+	
+	//qna 글삭제여부 확인하기
+	@RequestMapping(value = "/qnaRemoveForm", method = RequestMethod.GET)
+	public void removeQnaGET(int id, Model model) {
+		logger.info("qna 글삭제여부 묻기");
+		
+		Qna qna = qnaService.getQnaById(id);
+		model.addAttribute("qRemove", qna);
+	}
+	
+	//qna 글삭제작업
+	@RequestMapping(value = "/qnaRemove", method = RequestMethod.POST)
+	public void removeQnaPOST(Qna qna, Model model) {
+		logger.info("qna 글삭제작업");
+		
+		String result = null;
+		Qna qnaBefore = qnaService.getQnaById(qna.getId());
+		if (qna.getPassword().equals(qnaBefore.getPassword())) {
+			result = qnaService.removeQna(qna);
+		} else {
+			result = "비밀번호가 일치하지 않아 글을 삭제할 수 없습니다.";
+		}
+		model.addAttribute("result", result);
+	}
 
 
 	//상품 구매페이지
