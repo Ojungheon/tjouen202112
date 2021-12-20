@@ -61,6 +61,7 @@
 		                    			</div>
 		                    			<div class="form_section_content">
 		                    				<input name="name">
+		                    				<span class="ck_warn name_warn">상품 이름을 입력해주세요.</span>
 		                    			</div>
 		                    		</div>
 		                    		<div class="form_section">
@@ -69,6 +70,7 @@
 		                    			</div>
 		                    			<div class="form_section_content">
 		                    				<input name="category">
+		                    				<span class="ck_warn cate_warn">카테고리를 입력해주세요.</span>
 		                    			</div>
 		                    		</div>            
 		                    		<div class="form_section">
@@ -77,6 +79,7 @@
 		                    			</div>
 		                    			<div class="form_section_content">
 		                    				<input name="brand">
+		                    				<span class="ck_warn brand_warn">브랜드명을 입력해주세요.</span>
 		                    			</div>
 		                    		</div>            
 		                    		<div class="form_section">
@@ -85,6 +88,7 @@
 		                    			</div>
 		                    			<div class="form_section_content">
 		                    				<input name="prodDate" autocomplete="off" readonly="readonly">
+		                    				<span class="ck_warn prodDate_warn">생산일을 선택해주세요.</span>
 		                    			</div>
 		                    		</div>             
 		                    		<div class="form_section">
@@ -93,6 +97,7 @@
 		                    			</div>
 		                    			<div class="form_section_content">
 		                    				<input name="price">
+		                    				<span class="ck_warn price_warn">가격을 입력해주세요.</span>
 		                    			</div>
 		                    		</div>          
 		                    		<div class="form_section">
@@ -101,6 +106,7 @@
 		                    			</div>
 		                    			<div class="form_section_content">
 		                    				<input name="deliveryPrice">
+		                    				<span class="ck_warn delivery_warn">운송비를 입력해주세요.</span>
 		                    			</div>
 		                    		</div>               
 		                    		<div class="form_section">
@@ -109,6 +115,7 @@
 		                    			</div>
 		                    			<div class="form_section_content">
 		                    				<input name="dicountRate">
+		                    				<span class="ck_warn discount_warn">상품 할인율을 입력해주세요.</span>
 		                    			</div>
 		                    		</div>          
 		                    		<div class="form_section">
@@ -117,6 +124,7 @@
 		                    			</div>
 		                    			<div class="form_section_content">
 		                    				<textarea name="goodsIntro" id="goodsIntro_textarea"></textarea>
+		                    				<span class="ck_warn goodsIntro_warn">상품 소개를 입력해주세요.</span>
 		                    			</div>
 		                    		</div>          		
 		                    	

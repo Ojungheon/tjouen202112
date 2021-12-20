@@ -160,6 +160,14 @@ input[name='prodDate'] {
 	height: 170px;
 }
 
+.ck_warn{
+	display: none;
+	padding-top:  10px;
+	text-align:  center;
+	color: #e05757;
+	font-weight: 300;
+}
+
 /* 버튼 영역 */
 .btn_section{
 	text-align: center;

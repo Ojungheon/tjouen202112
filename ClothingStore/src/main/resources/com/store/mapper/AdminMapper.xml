@@ -9,4 +9,13 @@
  	values (#{id},#{name},#{category},#{brand},#{prodDate},#{price},#{deliveryPrice},#{discountRate},#{introduction})
  </insert>
  
+ <!-- 상품 리스트 -->
+ <select id="goodsGetList" resultType="com.store.model.Product">
+ 	select id , name , category , price, regDate from Product
+ </select>
+ 
+ <!-- 상품 총 갯수 --> 
+ <select id="goodsGetTotal" resultType="int">
+ 	select count(*) from Product
+ </select>
  </mapper>
