@@ -60,11 +60,10 @@
 	<div class="wrap">
 		<div class="gnb_area" id="container">
 			<ul class="myMenu">
-				<!-- 로그인안한 상태 -->
-			<c:if test = "${ member == null }">
 			<ul class="myMenu">
 				<li class="menu1"><a href="member/login">로그인</a></li>
 				<li class="menu2"><a href="member/join">회원가입</a></li>
+				<li class="menu3">마이페이지</li>
 				<li class="menu3">장바구니</li>
 				<li class="menu4">
 					커뮤니티
@@ -76,31 +75,7 @@
 				</li>
 				<li class="menu5"><a href="qna">Q&A</a></li>
 				<li class="menu6">Review</li>
-				<span>회원 : ${member.memberName}</span>
-                        <span>충전금액 : ${member.money}</span>
-                        <span>포인트 : ${member.point}</span>
 			</ul>
-				</c:if> 
-			    <!-- 로그인한 상태 -->
-                <c:if test="${ member != null }">
-                <div class="login_success_area">
-            		<ul class="myMenu">
-				<li class="menu7"><a href="/member/main">로그아웃</a></li>
-				<li class="menu2">장바구니</li>
-				<li class="menu3">마이페이지</li>
-				<li class="menu4">
-					커뮤니티
-					<ul class="community_sub">
-						<li><a href="notice">공지사항&이벤트</a></li>
-						<li>Q&A</li>
-						<li>Review</li>	
-					</ul>
-				</li>
-				<li class="menu5"><a href="qna">Q&A</a></li>
-				<li class="menu6">Review</li>
-			</ul>
-                </div>
-                </c:if>    
 		</div>
 		<div class="top_area">
 			<div class="logo_area">
