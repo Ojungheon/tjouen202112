@@ -8,7 +8,10 @@
 <meta charset="UTF-8">
 <title>Welcom SOJ</title>
 <link rel="stylesheet" href="resources/css/main.css?after">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script
+  src="https://code.jquery.com/jquery-3.4.1.js"
+  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous"></script>
 <style>
  ul, ol, li { list-style:none; margin:0; padding:0; }
    
@@ -54,6 +57,7 @@
                 )
 		})
 	})
+	
 </script>
 </head>
 <body>
@@ -68,7 +72,7 @@
 				</c:if>
 				<c:if test="${member != null }">
 					
-					<li><a href="/member/logout.do">로그아웃</a></li>
+					<li><a id="gnb_logout_button">로그아웃</a></li>
 					<li class="menu3">장바구니</li>
 					<li class="menu4">마이페이지</li>
 					<c:if test="${member.adminCk == 1 }">
@@ -346,5 +350,19 @@
 		</div>
 	</div> <!-- class="wrap" -->
 </div>
+<script>
+	/* gnb_area 로그아웃 버튼 작동 */
+	$("#gnb_logout_button").click(function () {
+		//alert("버튼 작동");
+		$.ajax({
+			type:"POST",
+			url:"/member/logout.do",
+			success:function(data){
+				alert("로그아웃 성공");
+				document.location.reload();
+			}
+		})
+	});
+</script>
 </body>
 </html>

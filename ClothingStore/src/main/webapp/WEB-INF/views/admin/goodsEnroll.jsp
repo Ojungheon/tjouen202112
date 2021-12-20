@@ -5,13 +5,14 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-<link rel="stylesheet" href="../resources/css/admin/goodsEnroll.css">
+<link rel="stylesheet" href="../resources/css/admin/goodsEnroll.css?after">
 <link rel="stylesheet" href="//code.jquery.com/ui/1.8.18/themes/base/jquery-ui.css" />
 <script
   src="https://code.jquery.com/jquery-3.4.1.js"
   integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
   crossorigin="anonymous">
 </script>
+<script src="https://cdn.ckeditor.com/ckeditor5/31.1.0/classic/ckeditor.js"></script>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 <script src="//code.jquery.com/ui/1.8.18/jquery-ui.min.js"></script>
 
@@ -115,7 +116,7 @@
 		                    				<label>상품 소개</label>
 		                    			</div>
 		                    			<div class="form_section_content">
-		                    				<input name="introduction">
+		                    				<textarea name="goodsIntro" id="goodsIntro_textarea"></textarea>
 		                    			</div>
 		                    		</div>          		
 		                    	
@@ -175,6 +176,14 @@ $("#enrollBtn").on("click",function(e){
 	 $("input[name='prodDate']").datepicker(config);
  });
 
+/* 위지윅 적용 */
+ 
+ /* 상품 소개 */
+ClassicEditor
+		.create(document.querySelector('#goodsIntro_textarea'))
+		.catch(error=>{
+			console.error(error);
+		});
 
 </script> 	        
       

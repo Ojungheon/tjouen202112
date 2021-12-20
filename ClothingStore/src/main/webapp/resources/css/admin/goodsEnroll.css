@@ -156,6 +156,9 @@ input[name='prodDate'] {
     width: 80%;
     text-align: center;
 }
+.ck-content{
+	height: 170px;
+}
 
 /* 버튼 영역 */
 .btn_section{
