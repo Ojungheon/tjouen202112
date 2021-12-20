@@ -148,5 +148,17 @@ public class MemberController {
 	        
 	        return "redirect:/main";
 	    }
+	    
+	  //메인페이지 로그아웃
+	    @RequestMapping(value="/main", method=RequestMethod.GET)
+	    public String logoutMainGET(HttpServletRequest request) throws Exception{
+	    	
+	    	HttpSession session = request.getSession();
+	    	
+	    	session.invalidate();
+	        
+	        return "redirect:/main";
+	        
+	    }
 	
 }

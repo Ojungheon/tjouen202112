@@ -3,25 +3,25 @@ package com.store.model;
 public class MemberVO {
 
 	//회원 id
-	private String memberId;
+	private String member_id;
 	
 	//회원 비밀번호
-	private String memberPw;
+	private String member_pw;
 	
 	//회원 이름
-	private String memberName;
+	private String member_name;
 	
 	//회원 이메일
-	private String memberMail;
+	private String member_mail;
 	
 	//회원 우편번호
-	private String memberAddr1;
+	private String member_addr1;
 	
 	//회원 주소
-	private String memberAddr2;
+	private String member_addr2;
 	
 	//회원 상세주소
-	private String memberAddr3;
+	private String member_addr3;
 	
 	// 관리자 구분(0:일반사용자, 1:관리자)
 	private int adminCk;
@@ -36,59 +36,59 @@ public class MemberVO {
 	private int point;
 
 	public String getMemberId() {
-		return memberId;
+		return member_id;
 	}
 
 	public void setMemberId(String memberId) {
-		this.memberId = memberId;
+		this.member_id = memberId;
 	}
 
 	public String getMemberPw() {
-		return memberPw;
+		return member_pw;
 	}
 
 	public void setMemberPw(String memberPw) {
-		this.memberPw = memberPw;
+		this.member_pw = memberPw;
 	}
 
 	public String getMemberName() {
-		return memberName;
+		return member_name;
 	}
 
 	public void setMemberName(String memberName) {
-		this.memberName = memberName;
+		this.member_name = memberName;
 	}
 
 	public String getMemberMail() {
-		return memberMail;
+		return member_mail;
 	}
 
 	public void setMemberMail(String memberMail) {
-		this.memberMail = memberMail;
+		this.member_mail = memberMail;
 	}
 
 	public String getMemberAddr1() {
-		return memberAddr1;
+		return member_addr1;
 	}
 
 	public void setMemberAddr1(String memberAddr1) {
-		this.memberAddr1 = memberAddr1;
+		this.member_addr1 = memberAddr1;
 	}
 
 	public String getMemberAddr2() {
-		return memberAddr2;
+		return member_addr2;
 	}
 
 	public void setMemberAddr2(String memberAddr2) {
-		this.memberAddr2 = memberAddr2;
+		this.member_addr2 = memberAddr2;
 	}
 
 	public String getMemberAddr3() {
-		return memberAddr3;
+		return member_addr3;
 	}
 
 	public void setMemberAddr3(String memberAddr3) {
-		this.memberAddr3 = memberAddr3;
+		this.member_addr3 = memberAddr3;
 	}
 
 	public int getAdminCk() {
@@ -125,9 +125,9 @@ public class MemberVO {
 
 	@Override
 	public String toString() {
-		return "MemberVO [memberId=" + memberId + ", memberPw=" + memberPw + ", memberName=" + memberName
-				+ ", memberMail=" + memberMail + ", memberAddr1=" + memberAddr1 + ", memberAddr2=" + memberAddr2
-				+ ", memberAddr3=" + memberAddr3 + ", adminCk=" + adminCk + ", regDate=" + regDate + ", money=" + money
+		return "MemberVO [memberId=" + member_id + ", memberPw=" + member_pw + ", memberName=" + member_name
+				+ ", memberMail=" + member_mail + ", memberAddr1=" + member_addr1 + ", memberAddr2=" + member_addr2
+				+ ", memberAddr3=" + member_addr3 + ", adminCk=" + adminCk + ", regDate=" + regDate + ", money=" + money
 				+ ", point=" + point + "]";
 	}
 
