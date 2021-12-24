@@ -23,6 +23,7 @@
     ul.myMenu > li ul.community_sub > li { display:inline-block; width:80px; padding:5px 10px; background:#eee; text-align:center; }
     ul.myMenu > li ul.community_sub > li:hover { background:#fff; }
 
+
 </style>
 <script type="text/javascript">
 	$(function () {
@@ -114,14 +115,28 @@
 				</c:if>
 			</div>
 			<div class="search_area">
-				<table class="search_table">
-					<tbody>
-						<tr class="search_box">
-							<td class="search_input"><input class="search_input_box" type="text" name="txt_search"></td>
-							<td class="run_search" ><a href="searchResult">검색</a></td>
-						</tr>
-					</tbody>
-				</table>
+				<form action="/searchResult" name="searchRun">
+					<table class="search_table">
+						<tbody>
+							<tr class="search_box">
+								<td class="search_input"><input class="search_input_box" type="text" name="txtSearch" id="txtSearch"></td>
+								<td class="run_search"><button class="search_button">검색</button></td>
+							</tr>
+						</tbody>
+					</table>
+				</form>
+				<script>
+					let search = document.searchRun;
+					searchRun.onsubmit = function(){
+						let getSearch = document.getElementById("txtSearch");
+						let searchValue = getSearch.value.trim();
+						if(searchValue == ""){
+							alert("검색어를 입력하세요.");
+							getSearch.focus();
+							return false;
+						}
+					}
+				</script>
 			</div>
 			
 			<div class="clearfix"></div>

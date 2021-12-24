@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -161,8 +162,16 @@
 			        <option value="highPrice">높은 가격순</option>
 			        <option value="review">사용후기 순</option>
 			    </select>   정렬 
-			    <input type="number" name="searchResult" readonly="readonly" value="11">Items
+			    <input type="number" name="searchResult" readonly="readonly" value="${count }">Items
 			    <hr>
+			    <div class="resultZone">
+			    	<c:if test="${count == 0 }">
+			    		검색결과가 없습니다.
+			    	</c:if>
+			    	<c:if test="${count > 0 }">
+				    	${result }
+			    	</c:if>
+			    </div>
 		    </div>
 		</div>
 		<div class="foot_bar_area">

@@ -10,6 +10,7 @@
 	
 	<typeAliases>
 		<typeAlias type="com.store.qna.Qna" alias="Qna"/>
+		<typeAlias type="com.store.model.Product" alias="Product"/>
 	</typeAliases>
 	
 </configuration>
