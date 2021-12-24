@@ -218,17 +218,17 @@
 					<ul class="lst_type">
 						<li>
 							<a href="/productPurchase">
+								<span class="thumb"><img src="https://jb-shop.kr/web/product/big/202101/77ee04362e57ae9ef8930cfa1696a4ee.webp" width="300px" height="375px" alt=""></span>
+								<em>
+									1997 양기모 후드<br>
+									Free<br>
+									42,000원<br>
+								</em>
+							</a>
+						</li>
+						<li>
+							<a href="#">
 								<span class="thumb"><img src="https://jb-shop.kr/web/product/big/202102/2b7da28f914d2c399804a445f4827d57.webp" width="300px" height="375px" alt=""></span>
-								<em>
-									브루클린 리그 후드티<br>
-									주문 폭주!!*기모선택 가능<br>
-									29,800원<br>
-								</em>
-							</a>
-						</li>
-						<li>
-							<a href="#">
-								<span class="thumb"><img src="https://jb-shop.kr/web/product/big/202101/77ee04362e57ae9ef8930cfa1696a4ee.webp" width="300px" height="375px" alt=""></span>
 								<em>브루클린 리그 후드티<br>
 									주문 폭주!!*기모선택 가능<br>
 									29,800원<br></em>
@@ -236,71 +236,92 @@
 						</li>
 						<li>
 							<a href="#">
-								<span class="thumb"><img src="https://jb-shop.kr/web/product/big/202101/77ee04362e57ae9ef8930cfa1696a4ee.webp" width="300px" height="375px" alt=""></span>
-								<em>브루클린 리그 후드티<br>
-									주문 폭주!!*기모선택 가능<br>
-									29,800원<br>
+								<span class="thumb"><img src="https://jb-shop.kr/web/product/big/202111/4ab6aab433d982ba6adb766669db4d91.webp" width="300px" height="375px" alt=""></span>
+								<em>마틴 골덴 트임 팬츠<br>
+									따뜻한 코듀로이! 핏 좋습니다.<br>
+									29,900원<br>
 								</em>
 							</a>
 						</li>
 						<li>
 							<a href="#">
-								<span class="thumb"><img src="https://jb-shop.kr/web/product/big/202101/77ee04362e57ae9ef8930cfa1696a4ee.webp" width="300px" height="375px" alt=""></span>
-								<em>브루클린 리그 후드티<br>
-									주문 폭주!!*기모선택 가능<br>
-									29,800원<br></em>
+								<span class="thumb"><img src="https://jb-shop.kr/web/product/big/20200214/6d0685cb527fd74c686a3d66129d507d.webp" width="300px" height="375px" alt=""></span>
+								<em>스텐다드 와이드 팬츠<br>
+									3천장 이상 판매 상품!<br>
+									34,000원<br></em>
 							</a>
 						</li>
 						<li>
 							<a href="#">
-								<span class="thumb"><img src="https://jb-shop.kr/web/product/big/202101/77ee04362e57ae9ef8930cfa1696a4ee.webp" width="300px" height="375px" alt=""></span>
-								<em>1997 양기모 후드 가격: 42000원</em>
+								<span class="thumb"><img src="https://jb-shop.kr/web/product/big/202112/6d0416c23e0bb03cabddda6ea595637b.gif" width="300px" height="375px" alt=""></span>
+								<em>뉴욕 자수 맨투맨<br>
+									Free<br>
+									38,000원<br>
+								</em>
 							</a>
 						</li>
 						<li>
 							<a href="#">
-								<span class="thumb"><img src="https://jb-shop.kr/web/product/big/202101/77ee04362e57ae9ef8930cfa1696a4ee.webp" width="300px" height="375px" alt=""></span>
-								<em>1997 양기모 후드 가격: 42000원</em>
+								<span class="thumb"><img src="https://jb-shop.kr/web/product/big/202008/2a8222bd478312b8ab4b4aafd6451751.webp" width="300px" height="375px" alt=""></span>
+								<em>[JB]4계절 레이어드 반팔티셔츠<br>
+									M,L<br>
+									16,000원<br>
+								</em>
 							</a>
 						</li>
 						<li>
 							<a href="#">
-								<span class="thumb"><img src="https://jb-shop.kr/web/product/big/202101/77ee04362e57ae9ef8930cfa1696a4ee.webp" width="300px" height="375px" alt=""></span>
-								<em>1997 양기모 후드 가격: 42000원</em>
+								<span class="thumb"><img src="https://jb-shop.kr/web/product/big/202112/f977c5bc6ffdfb8f772b83a70e1a7322.gif" width="300px" height="375px" alt=""></span>
+								<em>LAINE 기모 트레이닝 와이드팬츠<br>
+									M,L<br>
+									39,000원<br>
+								</em>
 							</a>
 						</li>
 						<li>
 							<a href="#">
-								<span class="thumb"><img src="https://jb-shop.kr/web/product/big/202101/77ee04362e57ae9ef8930cfa1696a4ee.webp" width="300px" height="375px" alt=""></span>
-								<em>1997 양기모 후드 가격: 42000원</em>
+								<span class="thumb"><img src="https://jb-shop.kr/web/product/big/202111/47a698b0637bda6296e6d8f7ae1e7377.webp" width="300px" height="375px" alt=""></span>
+								<em>올데이 스탠다드 데님<br>
+									S,M,L,XL<br>
+									38,000원<br>
+								</em>
 							</a>
 						</li>
 						<li>
 							<a href="#">
-								<span class="thumb"><img src="https://jb-shop.kr/web/product/big/202101/77ee04362e57ae9ef8930cfa1696a4ee.webp" width="300px" height="375px" alt=""></span>
-								<em>1997 양기모 후드 가격: 42000원</em>
+								<span class="thumb"><img src="https://jb-shop.kr/web/product/big/202011/9da48e2d06bab6b625a5c170cc3d18a1.webp" width="300px" height="375px" alt=""></span>
+								<em>퍼펙트 숏패딩<br>
+									Free<br>
+									47,000원<br>
+								</em>
 							</a>
 						</li>
 						<li>
 							<a href="#">
-								<span class="thumb"><img src="https://jb-shop.kr/web/product/big/202101/77ee04362e57ae9ef8930cfa1696a4ee.webp" width="300px" height="375px" alt=""></span>
-								<em>1997 양기모 후드 가격: 42000원</em>
+								<span class="thumb"><img src="https://jb-shop.kr/web/product/big/202109/34a89f15f74af0ef5e365828e45acff7.webp" width="300px" height="375px" alt=""></span>
+								<em>데일리 스웻 맨투맨<br>
+									Free<br>
+									19,900원<br>
+								</em>
 							</a>
 						</li>
 						<li>
 							<a href="#">
-								<span class="thumb"><img src="https://jb-shop.kr/web/product/big/202101/77ee04362e57ae9ef8930cfa1696a4ee.webp" width="300px" height="375px" alt=""></span>
+								<span class="thumb"><img src="https://jb-shop.kr/web/product/big/202010/753303d950e20eb60caca60f9d53b9e8.webp" width="300px" height="375px" alt=""></span>
 								<em>
-								1997 양기모 후드<br>  
-								가격: 42000원<br>
-								엘코드
+								캐시미어 후리스 머플러<br>  
+								Free<br>
+								16,000원<br>
 								</em>
 							</a>
 						</li>
 						<li>
 							<a href="#">
-								<span class="thumb"><img src="https://jb-shop.kr/web/product/big/202101/77ee04362e57ae9ef8930cfa1696a4ee.webp" width="300px" height="375px" alt=""></span>
-								<em>1997 양기모 후드 가격: 42000원</em>
+								<span class="thumb"><img src="https://jb-shop.kr/web/product/big/202109/5b4939a701dfcc0d5567cf427a1f14cf.webp" width="300px" height="375px" alt=""></span>
+								<em>[당일발송][1+1]워싱 카고 팬츠<br>
+									S,M,L,XL,2XL<br>
+									39,000원<br>
+								</em>
 							</a>
 						</li>
 					</ul>
