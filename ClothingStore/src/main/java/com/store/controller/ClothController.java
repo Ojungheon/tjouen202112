@@ -1,5 +1,7 @@
 package com.store.controller;
 
+import java.util.List;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -8,9 +10,11 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import com.store.model.Product;
 import com.store.qna.Qna;
 import com.store.qna.QnaListView;
 import com.store.service.QnaService;
+import com.store.service.SearchService;
 
 
 @Controller
@@ -20,6 +24,8 @@ public class ClothController {
 
 	@Autowired
 	QnaService qnaService;
+	@Autowired
+	SearchService searchService;
 
 	//메인페이지 이동
 	@RequestMapping(value = "/main", method = RequestMethod.GET)
@@ -138,8 +144,13 @@ public class ClothController {
 	}
 	//searchResult페이지
 	@RequestMapping(value = "/searchResult", method = RequestMethod.GET)
-	public void searchResultGET() {
+	public void searchResultGET(String txtSearch, Model model) {
 		logger.info("searchResult 페이지 진입");
+		//검색어를 사용하여 DB에서 검색을 수행
+		List<Product> result = searchService.selectProduct(txtSearch);
+		int count = searchService.selectCountProduct(txtSearch);
+		model.addAttribute("result", result);
+		model.addAttribute("count", count);
 	}
 	//긴팔티 페이지
 	@RequestMapping(value = "long", method = RequestMethod.GET)

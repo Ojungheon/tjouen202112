@@ -102,8 +102,8 @@ a{
 	border-collapse: collapse;
 	border: 3px solid black;
 	border-radius: 10px;
-	width: 60%;
-	height: 30%;
+	width: 400px;
+	height: 35px;
 	margin-left: 135px;
 	margin-top: 45px;
 }
@@ -112,6 +112,8 @@ a{
 }
 .serach_box{
 	width: 100%;
+	border: none;
+	background-color: white;
 }
 .search_input{
 	width: 80%;
@@ -124,6 +126,11 @@ a{
 .run_search{
 	width: 20%;
 	text-align: center;
+}
+.search_button{
+	background-color: white;
+	border: none;
+	cursor: pointer;
 }
 /*제품 목록 네비*/
 .navi_bar_area{
