@@ -1,9 +1,12 @@
 package com.store.service;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.store.mapper.AdminMapper;
+import com.store.model.Criteria;
 import com.store.model.Product;
 
 @Service
@@ -16,6 +19,16 @@ public class AdminServiceImpl implements AdminService {
 	public void productEnroll(Product product) {
 
 		adminMapper.productEnroll(product);
+	}
+
+	@Override
+	public List<Product> goodsGetList(Criteria cri) {
+		return adminMapper.goodsGetList(cri);
+	}
+
+	@Override
+	public int goodsGetTotal(Criteria cri) {
+		return adminMapper.goodsGetTotal(cri);
 	}
 	
 	

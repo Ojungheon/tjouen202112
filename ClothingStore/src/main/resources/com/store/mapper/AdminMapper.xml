@@ -5,13 +5,13 @@
  <mapper namespace="com.store.mapper.AdminMapper">
  <!-- 상품 등록 -->
  <insert id="productEnroll">
- 	insert into product(id, name, category, brand, prod_date, price, delivery_price, discount_rate, introduction)
- 	values (#{id},#{name},#{category},#{brand},#{prodDate},#{price},#{deliveryPrice},#{discountRate},#{introduction})
+ 	insert into product(name, category, brand, prod_date, price, delivery_price, discount_rate, introduction)
+ 	values (#{name},#{category},#{brand},#{prodDate},#{price},#{deliveryPrice},#{discountRate},#{introduction})
  </insert>
  
  <!-- 상품 리스트 -->
  <select id="goodsGetList" resultType="com.store.model.Product">
- 	select id , name , category , price, regDate from Product
+ 	select id , name , category , price, reg_date from Product
  </select>
  
  <!-- 상품 총 갯수 --> 
