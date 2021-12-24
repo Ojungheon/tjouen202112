@@ -18,4 +18,7 @@ public interface AdminMapper {
 	
 	/* 상품 조회 페이지 */
 	public Product goodsGetDetail(int id);
+	
+	/* 상품 정보 삭제 */
+	public int goodsDelete(int id);
 }

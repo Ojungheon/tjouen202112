@@ -35,6 +35,11 @@ public class AdminServiceImpl implements AdminService {
 	public Product goodsGetDetail(int id) {
 		return adminMapper.goodsGetDetail(id);
 	}
+
+	@Override
+	public int goodsDelete(int id) {
+		return adminMapper.goodsDelete(id);
+	}
 	
 	
 }
