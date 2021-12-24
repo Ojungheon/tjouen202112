@@ -262,6 +262,6 @@ table {
 			<h1>foot area</h1>
 		</div>
 	</div>
-
+</div>
 </body>
 </html>
