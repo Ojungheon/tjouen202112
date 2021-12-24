@@ -12,7 +12,7 @@
   integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
   crossorigin="anonymous">
 </script>
-<script src="https://cdn.ckeditor.com/ckeditor5/31.1.0/classic/ckeditor.js"></script>
+<script src="https://cdn.ckeditor.com/ckeditor5/26.0.0/classic/ckeditor.js"></script>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 <script src="//code.jquery.com/ui/1.8.18/jquery-ui.min.js"></script>
 
@@ -123,7 +123,7 @@
 		                    				<label>상품 소개</label>
 		                    			</div>
 		                    			<div class="form_section_content">
-		                    				<textarea name="goodsIntro" id="goodsIntro_textarea"></textarea>
+		                    				<textarea name="introduction" id="goodsIntro_textarea"></textarea>
 		                    				<span class="ck_warn goodsIntro_warn">상품 소개를 입력해주세요.</span>
 		                    			</div>
 		                    		</div>          		
@@ -139,7 +139,9 @@
                 
              </div>
                 <div class="clearfix"></div>
-       
+        </div>    <!-- class="wrap" -->
+</div>    <!-- class="wrapper" -->
+ 
 <script>
 
 	let enrollForm = $("#enrollForm")
@@ -184,22 +186,24 @@ $("#enrollBtn").on("click",function(e){
 	 $("input[name='prodDate']").datepicker(config);
  });
 
-/* 위지윅 적용 */
+ /* 위지윅 적용 */
  
- /* 상품 소개 */
-ClassicEditor
-		.create(document.querySelector('#goodsIntro_textarea'))
+	/* 책 소개 */
+	ClassicEditor
+		.create(document.querySelector('#goodsIntro_textarea'),config)
 		.catch(error=>{
 			console.error(error);
 		});
+
+
+
+
 
 </script> 	        
       
         
   
         
-    </div>    <!-- class="wrap" -->
-</div>    <!-- class="wrapper" -->
- 
+   
 </body>
 </html>
