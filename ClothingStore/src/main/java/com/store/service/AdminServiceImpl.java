@@ -30,6 +30,11 @@ public class AdminServiceImpl implements AdminService {
 	public int goodsGetTotal(Criteria cri) {
 		return adminMapper.goodsGetTotal(cri);
 	}
+
+	@Override
+	public Product goodsGetDetail(int id) {
+		return adminMapper.goodsGetDetail(id);
+	}
 	
 	
 }

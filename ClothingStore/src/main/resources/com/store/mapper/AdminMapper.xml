@@ -26,4 +26,10 @@
  		where name like concat('%', #{keyword}, '%')
  	</if>
  </select>
+ 
+ <!-- 상품 조회 페이지 -->
+ <select id="goodsGetDetail" resultType="com.store.model.Product">
+ 	select id , name, category, brand, prod_date, price, delivery_price, discount_rate, introduction , reg_date , update_date
+ 	from Product where id = #{id}
+ </select>
  </mapper>

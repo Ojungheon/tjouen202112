@@ -7,6 +7,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -68,6 +69,18 @@ public class AdminController {
 		rttr.addFlashAttribute("enroll_result", product.getName()); //등록 성공 메시지
 		
 		return "redirect:/admin/goodsManage";
+	}
+	
+	/* 상품 조회 페이지 */
+	@GetMapping({"/goodsDetail", "/goodsModify"})
+	public void goodsGetInfoGET(int id , Criteria cri, Model model) {
+		logger.info("goodsGetInfo()......"+ id);
+		
+		/* 목록 페이지 조건 정보 */
+		model.addAttribute("cri", cri);
+		
+		/* 조회 페이지 정보 */
+		model.addAttribute("goodsInfo", adminService.goodsGetDetail(id));
 	}
 	
 

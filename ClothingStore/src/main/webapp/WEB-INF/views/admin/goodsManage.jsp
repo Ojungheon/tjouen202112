@@ -67,7 +67,11 @@
 	              					<c:forEach items="${list }" var="list">
 	              						<tr>
 	              							<td><c:out value="${list.id }"></c:out></td>
-	              							<td><c:out value="${list.name }"></c:out></td>
+	              							<td>
+	              								<a class="move" href='<c:out value="${list.id }"/>'>
+	              									<c:out value="${list.name }"></c:out>
+	              								</a>
+	              							</td>
 	              							<td><c:out value="${list.brand }"></c:out></td>
 	              							<td><c:out value="${list.category }"></c:out></td>
 	              							<td><c:out value="${list.price }"></c:out></td>
@@ -79,7 +83,7 @@
 	                    	<!-- 상품 리스트 X -->
 	                    		<c:if test="${listCheck == 'empty' }">
 	                    			<div class="table-empty">
-	                    				등록된 작가가 없습니다.
+	                    				등록된 상품이 없습니다.
 	                    			</div>
 	                    		</c:if>
 	                    </div>
@@ -189,6 +193,15 @@ $(".pageMaker_btn a").on("click", function(e){
 	
 	moveForm.submit();
 	
+});
+/* 상품 조회 페이지 */
+$(".move").on("click", function(e){
+		
+		e.preventDefault();
+		
+		moveForm.append("<input type='hidden' name='id' value='"+$(this).attr("href") +"'>");
+		moveForm.attr("action", "/admin/goodsDetail");
+		moveForm.submit();
 });
 </script>
  
