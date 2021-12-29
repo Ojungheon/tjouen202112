@@ -83,6 +83,20 @@ public class AdminController {
 		model.addAttribute("goodsInfo", adminService.goodsGetDetail(id));
 	}
 	
+	/* 상품 정보 수정 */
+	@PostMapping("/goodsModify")
+	public String goodsModifyPOST(Product pro, RedirectAttributes rttr) {
+		
+		logger.info("goodsModifyPOST.........." + pro);
+		
+		int result = adminService.goodsModify(pro);
+		
+		rttr.addFlashAttribute("modify_result", result);
+		
+		return "redirect:/admin/goodsManage";		
+		
+	}
+	
 	/* 상품 정보 삭제 */
 	@PostMapping("/goodsDelete")
 	public String goodsDeletePOST(int id, RedirectAttributes rttr) {

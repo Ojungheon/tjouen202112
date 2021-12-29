@@ -40,6 +40,11 @@ public class AdminServiceImpl implements AdminService {
 	public int goodsDelete(int id) {
 		return adminMapper.goodsDelete(id);
 	}
+
+	@Override
+	public int goodsModify(Product pro) {
+		return adminMapper.goodsModify(pro);
+	}
 	
 	
 }

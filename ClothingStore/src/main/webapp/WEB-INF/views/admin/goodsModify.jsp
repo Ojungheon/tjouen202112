@@ -5,7 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-<link rel="stylesheet" href="../resources/css/admin/goodsModify.css">
+<link rel="stylesheet" href="../resources/css/admin/goodsModify.css?after">
 <link rel="stylesheet" href="//code.jquery.com/ui/1.8.18/themes/base/jquery-ui.css" />
 <script
   src="https://code.jquery.com/jquery-3.4.1.js"
@@ -128,6 +128,7 @@
 		                   			<div class="btn_section">
 		                   				<button id="cancelBtn" class="btn">취 소</button>
 			                    		<button id="modifyBtn" class="btn modify_btn">수 정</button>
+			                    		<button id="deleteBtn" class="btn delete_btn">삭 제</button>
 			                    	</div> 
 		                    </div>
 		                    
@@ -135,7 +136,7 @@
 		 						<input type="hidden" name="pageNum" value="${cri.pageNum}">
 								<input type="hidden" name="amount" value="${cri.amount}">
 								<input type="hidden" name="keyword" value="${cri.keyword}">
-								<input type="hidden" name='bookId' value="${goodsInfo.bookId}">
+								<input type="hidden" name='Id' value="${goodsInfo.id}">
                 			</form>        
 						</div>
 					</div>
@@ -144,5 +145,53 @@
                 <div class="clearfix"></div>
         </div>    <!-- class="wrap" -->
 </div>    <!-- class="wrapper" -->
+<script>
+/* 캘린더 위젯 적용 */
+
+/* 설정 */
+const config = {
+		dateFormat: 'yy-mm-dd',
+		showOn : "button",
+		buttonText:"날짜 선택",
+		prevText: '이전 달',
+	    nextText: '다음 달',
+	    monthNames: ['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월'],
+	    monthNamesShort: ['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월'],
+	    dayNames: ['일','월','화','수','목','금','토'],
+	    dayNamesShort: ['일','월','화','수','목','금','토'],
+	    dayNamesMin: ['일','월','화','수','목','금','토'],
+	    yearSuffix: '년',
+	    changeMonth: true,
+	    changeYear: true
+}
+
+/* 캘린더 */
+$(function(){
+	 $("input[name='prodDate']").datepicker(config);
+});
+
+/* 취소 버튼 */
+$("#cancelBtn").on("click", function(e){
+	e.preventDefault();
+	$("#moveForm").submit();
+});
+
+/* 수정 버튼 */
+$("#modifyBtn").on("click", function(e){
+	e.preventDefault();
+	$("#modifyForm").submit();
+});
+
+/* 삭제 버튼 */
+$("#deleteBtn").on("click", function(e){
+	e.preventDefault();
+	let moveForm = $("#moveForm");
+	moveForm.find("input").remove();
+	moveForm.append('<input type="hidden" name="id" value="${goodsInfo.id}">');
+	moveForm.attr("action", "/admin/goodsDelete");
+	moveForm.attr("method", "post");
+	moveForm.submit();
+});
+</script>
 </body>
 </html>

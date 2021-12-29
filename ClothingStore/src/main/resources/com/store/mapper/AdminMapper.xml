@@ -33,6 +33,12 @@
  	from Product where id = #{id}
  </select>
  
+ <!-- 상품 정보 수정 -->
+ <update id="goodsModify">
+ 	update product set name = #{name} , category = #{category} , brand = #{brand}, prod_date = #{prodDate} , price = #{price} ,
+ 	delivery_price = #{deliveryPrice} , discount_rate = #{discountRate} , introduction = #{introduction} where id = #{id} 
+ </update>
+ 
  <!-- 상품 정보 삭제 -->
  <delete id="goodsDelete">
  	delete from Product where id = #{id}
