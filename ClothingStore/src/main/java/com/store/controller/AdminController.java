@@ -1,9 +1,11 @@
 package com.store.controller;
 
 import java.awt.Graphics2D;
-import java.awt.PageAttributes.MediaType;
+import javax.ws.rs.core.MediaType;
 import java.awt.image.BufferedImage;
 import java.io.File;
+import java.io.IOException;
+import java.nio.file.Files;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
@@ -127,10 +129,31 @@ public class AdminController {
 	}
 	
 	/* 첨부 파일 업로드 */
-	@PostMapping(value="/uploadAjaxAction", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
+	@PostMapping(value="/uploadAjaxAction", produces = MediaType.APPLICATION_JSON)
 	public ResponseEntity<List<AttachImageVO>> uploadAjaxActionPOST(MultipartFile[] uploadFile) {
 		
 		logger.info("uploadAjaxAcionPOST......");
+		
+		/* 이미지 파일 체크 */
+		for(MultipartFile multipartFile: uploadFile) {
+			
+			File checkfile = new File(multipartFile.getOriginalFilename());
+			String type = null;
+			
+			try {
+				type = Files.probeContentType(checkfile.toPath());
+				logger.info("MIME TYPE : " + type);
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+			
+			if(!type.startsWith("image")) {
+				
+				List<AttachImageVO> list = null;
+				return new ResponseEntity<>(list, HttpStatus.BAD_REQUEST);
+			}
+		}
+		
 		String uploadFolder = "C:\\upload";
 		
 		/* 날짜 폴더 경로 */
