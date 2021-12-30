@@ -125,6 +125,14 @@
 		                    				<textarea name="introduction" id="goodsIntro_textarea"></textarea>
 		                    				<span class="ck_warn goodsIntro_warn">상품 소개를 입력해주세요.</span>
 		                    			</div>
+		                    		</div>
+		                    		<div class="form_section">
+		                    			<div class="form_section_title">
+		                    				<label>상품 이미지</label>
+		                    			</div>
+		                    			<div class="form_section_content">
+		                    				<input type="file" id="fileItem" name='uploadFile' style="height: 30px;" multiple>
+		                    			</div>
 		                    		</div>          		
 		                    	
 		                   		</form>
@@ -194,15 +202,57 @@ $("#enrollBtn").on("click",function(e){
 			console.error(error);
 		});
 
+/* 이미지 업로드 */
+$("input[type='file']").on("change", function(e){
+	
+	let formData = new FormData();
+	let fileInput = $('input[name="uploadFile"]');
+	let fileList = fileInput[0].files;
+	let fileObj = fileList[0];
+	
+	if(!fileCheck(fileObj.name, fileObj.size)){
+		return false;
+	}
+	
+	for(let i = 0; i < fileList.length; i++){
+		formData.append("uploadFile", fileList[i]);
+	}
+	
+	$.ajax({
+		url: '/admin/uploadAjaxAction',
+		processData : false,
+		contentType : false,
+		data : formData,
+		type : 'POST',
+		dataType : 'json',
+		success : function(result){
+			console.log(result);
+		}
+	});
+});
 
+/* var, method related with attachFile */
+let regex = new RegExp("(.*?)\.(jpg|png)$");
+let maxSize = 1048576; // 1MB
+
+function fileCheck(fileName, fileSize){
+	
+	if(fileSize >= maxSize){
+		alert("파일 사이즈 초과");
+		return false;
+	}
+	
+	if(!regex.test(fileName)){
+		alert("해당 종류의 파일은 업로드 할 수 없습니다.");
+		return false;
+	}
+	
+	return true;
+}
 
 
 
 </script> 	        
       
-        
-  
-        
-   
 </body>
 </html>

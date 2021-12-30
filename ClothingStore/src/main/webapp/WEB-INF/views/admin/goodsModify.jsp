@@ -167,7 +167,10 @@ const config = {
 
 /* 캘린더 */
 $(function(){
+	let prodDate = '${goodsInfo.prodDate}';
 	 $("input[name='prodDate']").datepicker(config);
+	 $("input[name='prodDate']").datepicker('setDate', prodDate);
+	 
 });
 
 /* 취소 버튼 */
