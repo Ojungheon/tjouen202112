@@ -25,6 +25,9 @@
 	.searchResult{
 		width: 100%;
 	}
+	.price{
+		text-decoration: line-through;
+	}
 </style>
 </head>
 <body>
@@ -184,7 +187,20 @@
 			    		검색결과가 없습니다.
 			    	</c:if>
 			    	<c:if test="${count > 0 }">
-				    	${result }
+				    	<ul class="lst_type">
+						<c:forEach var="r" items="${result}">
+				    		<li>
+								<a href="/productPurchase">
+									<span class="thumb"><img src="" width="300px" height="375px" alt=""></span>
+									<em>
+										${r.name}<br>
+										${r.introduction }<br>
+										<span class="price">${r.price}</span>${r.price*((100-r.discountRate)/100) }<br>
+									</em>
+								</a>
+							</li>
+				    	</c:forEach>
+						</ul>
 			    	</c:if>
 			    </div>
 		    </div>
